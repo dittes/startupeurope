@@ -1,21 +1,1578 @@
 <!DOCTYPE html>
-<html lang="en" >
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Startup Europe 🇪🇺⭐</title>
-  <link rel="stylesheet" href="./style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<title>Startup Europe — Build the European Dream in Europe's Single Market</title>
+<meta name="description" content="450 million consumers. €18 trillion economy. One Single Market. Build in Europe and go from one city to a continent — with world-class talent, deep industry, and trust as a competitive advantage.">
+<meta name="robots" content="index, follow">
+<meta name="author" content="Startup Europe">
+<link rel="canonical" href="https://startupeurope.org/">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://startupeurope.org/">
+<meta property="og:title" content="Startup Europe — Build the European Dream">
+<meta property="og:description" content="450 million consumers. €18 trillion economy. One Single Market. Build in Europe and go from one city to a continent.">
+<meta property="og:locale" content="en_EU">
+<meta property="og:site_name" content="Startup Europe">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Startup Europe — Build the European Dream">
+<meta name="twitter:description" content="450 million consumers. €18 trillion economy. One Single Market. World-class talent, deep industry, trust as a competitive advantage.">
+
+<!-- Structured Data: Organization -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Startup Europe",
+  "url": "https://startupeurope.org",
+  "description": "Founder community for cross-border company building in Europe's Single Market.",
+  "areaServed": "Europe"
+}
+</script>
+
+<!-- Structured Data: WebSite -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Startup Europe",
+  "url": "https://startupeurope.org",
+  "description": "Europe is a single market for ambition. Resources, community, and programmes for founders building cross-border companies in Europe."
+}
+</script>
+
+<!-- Structured Data: FAQPage (inline, SEO-visible) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {"@type":"Question","name":"Is Europe really a good place to start a startup?","acceptedAnswer":{"@type":"Answer","text":"Yes. Europe offers a €18 trillion economy, 450 million consumers in one Single Market (source: European Commission), the world's densest concentration of applied science talent outside the US, structured industrial partnership networks, and a regulatory environment that — when designed for from day one — becomes a global distribution moat. The challenge is building for the whole continent, not one country."}},
+    {"@type":"Question","name":"How do I hire across EU member states without local entities?","acceptedAnswer":{"@type":"Answer","text":"Employer of Record (EOR) services like Deel, Remote, and Horizons allow you to employ workers in countries where you have no entity. The EOR is the legal employer; you direct the work. Costs are typically 15–25% on top of salary. This is the standard solution at seed and Series A."}},
+    {"@type":"Question","name":"What EU funding is available for early-stage startups?","acceptedAnswer":{"@type":"Answer","text":"Key instruments include EIC Accelerator (up to €2.5M grant + up to €10M equity), EIC Pathfinder (up to €3M for breakthrough research), Horizon Europe Innovation Actions (~€93.5B budget 2021–2027), and EIF-backed national VC funds via InvestEU. Most successful deep-tech founders stack instruments — grant for science validation, equity for commercial scale."}},
+    {"@type":"Question","name":"How does GDPR affect my startup?","acceptedAnswer":{"@type":"Answer","text":"GDPR requires you to document data processing, have a valid legal basis for each type, handle data subject requests, and have a breach response plan. The minimum viable posture: a Record of Processing Activities, an accurate privacy policy, and no collecting data you don't need. The GDPR also turned out to be a product standard — European compliance is now table stakes for global enterprise sales."}},
+    {"@type":"Question","name":"What is the EU AI Act and does it affect me?","acceptedAnswer":{"@type":"Answer","text":"Most B2B productivity tools fall under 'limited risk' with light transparency obligations. High-risk AI — used in hiring, credit, healthcare, biometrics — faces significant conformity requirements. Design your compliance architecture from the start; retrofitting is expensive. Non-high-risk AI companies mainly need to ensure their transparency notices are in order."}},
+    {"@type":"Question","name":"How do I enter a second European market quickly?","acceptedAnswer":{"@type":"Answer","text":"The fastest route is a distribution partnership, not direct sales. Identify incumbent system integrators or channel partners in your target market who already have customer trust. A first market entry takes 12–18 months; with the right partner, the second takes 6–9. Invest in finding the right partner early — it compounds."}},
+    {"@type":"Question","name":"How do stock options work across EU countries?","acceptedAnswer":{"@type":"Answer","text":"Tax treatment of options varies significantly. France has the most founder-friendly regime (BSPCE). Germany reformed in 2021 but still has friction. Most other EU states tax options at exercise as income, creating cash flow problems. Structure your share option plan under your incorporation jurisdiction's law and work with local tax advisers per employee country."}},
+    {"@type":"Question","name":"What are the best European deep tech clusters?","acceptedAnswer":{"@type":"Answer","text":"By sector: quantum and photonics (Delft, Munich, Vienna); synthetic biology (London, Paris, Heidelberg); advanced manufacturing and robotics (Munich, Eindhoven, Wrocław); climate tech (Hamburg, Copenhagen, Stockholm, Amsterdam); industrial AI (Berlin, Paris, Warsaw); life sciences (Basel, Cambridge, Munich, Copenhagen, Utrecht). Cluster proximity matters for talent, pilots, and investor familiarity."}}
+  ]
+}
+</script>
+
+<style>
+/* ─── Reset & Variables ───────────────────────────────────────────── */
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+:root{
+  --blue:      #003399;
+  --blue-dark: #001f66;
+  --blue-deep: #00124d;
+  --blue-10:   #e7edfa;
+  --blue-20:   #c5d3f0;
+  --blue-60:   #6688cc;
+  --yellow:    #ffcc00;
+  --yellow-dk: #e6b800;
+  --white:     #ffffff;
+  --off-white: #f7f9fc;
+  --grey-100:  #eef0f5;
+  --grey-200:  #dde1ec;
+  --grey-500:  #6b7280;
+  --grey-800:  #1f2637;
+  --black:     #0d1020;
+  --font:      -apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji";
+  --mono:      "SF Mono","Fira Code",ui-monospace,monospace;
+  --ease:      cubic-bezier(.16,1,.3,1);
+  --shadow:    0 4px 24px rgba(0,51,153,.12);
+  --shadow-lg: 0 16px 56px rgba(0,51,153,.18);
+  --r:         4px;
+  --r-md:      8px;
+  --r-lg:      16px;
+}
+html{scroll-behavior:smooth;font-size:16px;-webkit-text-size-adjust:100%;}
+body{font-family:var(--font);background:var(--white);color:var(--grey-800);line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:hidden;}
+img,svg{max-width:100%;display:block;}
+a{color:var(--blue);text-decoration:none;}
+a:hover{text-decoration:underline;}
+ul{list-style:none;}
+button,input,select,textarea{font-family:var(--font);}
+
+/* ─── Accessibility ──────────────────────────────────────────────── */
+.skip{position:absolute;top:-100px;left:1rem;background:var(--yellow);color:var(--black);padding:.4rem 1rem;font-weight:700;font-size:.85rem;z-index:9999;border-radius:var(--r);}
+.skip:focus{top:.5rem;}
+:focus-visible{outline:2px solid var(--yellow);outline-offset:3px;border-radius:var(--r);}
+
+/* ─── Layout ─────────────────────────────────────────────────────── */
+.container{width:100%;max-width:1160px;margin-inline:auto;padding-inline:1.5rem;}
+@media(min-width:768px){.container{padding-inline:2rem;}}
+.section{padding-block:5rem;}
+.section--lg{padding-block:7rem;}
+.section--sm{padding-block:3rem;}
+.grid2{display:grid;grid-template-columns:1fr;gap:2rem;}
+.grid3{display:grid;grid-template-columns:1fr;gap:2rem;}
+.grid4{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;}
+@media(min-width:640px){.grid2{grid-template-columns:1fr 1fr;}.grid4{grid-template-columns:1fr 1fr;}}
+@media(min-width:900px){.grid3{grid-template-columns:1fr 1fr 1fr;}}
+@media(min-width:1024px){.grid4{grid-template-columns:repeat(4,1fr);}}
+
+/* ─── Typography ─────────────────────────────────────────────────── */
+h1,h2,h3,h4{line-height:1.1;letter-spacing:-.01em;color:var(--grey-800);}
+h1{font-size:clamp(2.4rem,6vw,4.5rem);font-weight:800;}
+h2{font-size:clamp(2rem,4vw,3rem);font-weight:700;}
+h3{font-size:clamp(1.25rem,2.5vw,1.6rem);font-weight:700;}
+h4{font-size:1.1rem;font-weight:600;}
+p{max-width:68ch;}
+p+p{margin-top:1rem;}
+.lead{font-size:clamp(1rem,2vw,1.2rem);line-height:1.65;color:var(--grey-500);}
+.label{display:inline-flex;align-items:center;gap:.5rem;font-size:.75rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--blue);margin-bottom:.75rem;}
+.label::before{content:'';display:inline-block;width:20px;height:2px;background:var(--yellow);}
+
+/* ─── Buttons ────────────────────────────────────────────────────── */
+.btn{display:inline-flex;align-items:center;gap:.5rem;padding:.75rem 2rem;font-size:1rem;font-weight:600;letter-spacing:.02em;border-radius:var(--r);border:2px solid transparent;cursor:pointer;text-decoration:none;transition:background 160ms,color 160ms,border-color 160ms,box-shadow 160ms,transform 160ms;line-height:1;white-space:nowrap;}
+.btn:hover{text-decoration:none;transform:translateY(-1px);}
+.btn:active{transform:translateY(0);}
+.btn-primary{background:var(--yellow);color:var(--black);border-color:var(--yellow);}
+.btn-primary:hover{background:var(--yellow-dk);border-color:var(--yellow-dk);box-shadow:0 4px 20px rgba(255,204,0,.4);color:var(--black);}
+.btn-secondary{background:transparent;color:var(--white);border-color:rgba(255,255,255,.45);}
+.btn-secondary:hover{background:rgba(255,255,255,.1);border-color:var(--white);color:var(--white);}
+.btn-outline{background:transparent;color:var(--blue);border-color:var(--blue);}
+.btn-outline:hover{background:var(--blue);color:var(--white);}
+.btn-sm{padding:.5rem 1.25rem;font-size:.875rem;}
+.btn-lg{padding:1rem 2.5rem;font-size:1.1rem;}
+
+/* ─── Header ─────────────────────────────────────────────────────── */
+.site-header{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(0,18,77,.92);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:2px solid rgba(255,204,0,.3);transition:box-shadow .3s;}
+.site-header.scrolled{box-shadow:0 4px 32px rgba(0,0,0,.4);}
+.hdr-inner{display:flex;align-items:center;justify-content:space-between;height:60px;gap:1.5rem;}
+.hdr-logo{display:flex;align-items:center;gap:.6rem;text-decoration:none;flex-shrink:0;}
+.hdr-logo svg{width:32px;height:32px;}
+.hdr-logo span{font-size:1.1rem;font-weight:800;color:var(--white);letter-spacing:.04em;text-transform:uppercase;}
+.hdr-logo span em{color:var(--yellow);font-style:normal;}
+.hdr-nav{display:none;align-items:center;gap:.25rem;}
+@media(min-width:860px){.hdr-nav{display:flex;}}
+.hdr-nav a{padding:.4rem .7rem;font-size:.875rem;font-weight:600;color:rgba(255,255,255,.75);text-transform:uppercase;letter-spacing:.04em;border-radius:var(--r);transition:color .15s,background .15s;}
+.hdr-nav a:hover{color:var(--white);background:rgba(255,255,255,.1);text-decoration:none;}
+.hdr-cta{display:none;}
+@media(min-width:860px){.hdr-cta{display:flex;}}
+.mob-btn{display:flex;flex-direction:column;gap:5px;padding:.5rem;background:none;border:none;cursor:pointer;border-radius:var(--r);}
+@media(min-width:860px){.mob-btn{display:none;}}
+.mob-btn span{display:block;width:22px;height:2px;background:var(--white);border-radius:2px;transition:transform .18s,opacity .18s;}
+.mob-btn[aria-expanded=true] span:nth-child(1){transform:translateY(7px) rotate(45deg);}
+.mob-btn[aria-expanded=true] span:nth-child(2){opacity:0;}
+.mob-btn[aria-expanded=true] span:nth-child(3){transform:translateY(-7px) rotate(-45deg);}
+.mob-nav{display:none;position:absolute;top:100%;left:0;right:0;background:var(--blue-deep);border-bottom:2px solid var(--yellow);padding:1rem 1.5rem;flex-direction:column;gap:.25rem;}
+.mob-nav.open{display:flex;}
+.mob-nav a{padding:.75rem 1rem;font-weight:600;font-size:1rem;text-transform:uppercase;letter-spacing:.04em;color:rgba(255,255,255,.8);border-radius:var(--r);transition:color .15s,background .15s;}
+.mob-nav a:hover{color:var(--white);background:rgba(255,255,255,.1);text-decoration:none;}
+
+/* ─── HERO ───────────────────────────────────────────────────────── */
+#hero{position:relative;width:100%;height:100vh;min-height:560px;overflow:hidden;}
+#hero canvas{position:absolute;inset:0;width:100%!important;height:100%!important;display:block;}
+.hero-overlay{position:absolute;inset:0;background:linear-gradient(to right,rgba(0,18,77,.78) 0%,rgba(0,18,77,.35) 60%,transparent 100%);}
+.hero-content{position:relative;z-index:2;height:100%;display:flex;align-items:center;padding-top:60px;}
+.hero-inner{max-width:660px;}
+.hero-tag{display:inline-flex;align-items:center;gap:.5rem;background:rgba(255,204,0,.14);border:1px solid rgba(255,204,0,.35);color:var(--yellow);padding:.35rem .9rem;font-size:.75rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;border-radius:2px;margin-bottom:1.5rem;}
+#hero h1{color:var(--white);margin-bottom:1.5rem;text-shadow:0 2px 40px rgba(0,0,0,.4);}
+#hero h1 em{font-style:normal;color:var(--yellow);}
+#hero .lead{color:rgba(255,255,255,.75);max-width:52ch;margin-bottom:2rem;}
+.hero-ctas{display:flex;flex-wrap:wrap;gap:1rem;margin-bottom:2.5rem;}
+.hero-stats{display:flex;flex-wrap:wrap;gap:1.5rem;}
+.hero-stat{display:flex;flex-direction:column;}
+.hero-stat strong{font-size:1.5rem;font-weight:800;color:var(--yellow);line-height:1;}
+.hero-stat span{font-size:.75rem;color:rgba(255,255,255,.55);letter-spacing:.06em;text-transform:uppercase;margin-top:.2rem;}
+
+#hero canvas {
+  pointer-events: auto;
+  z-index: 1;
+}
+
+.hero-content {
+  pointer-events: none;
+}
+
+.hero-content a,
+.hero-content button {
+  pointer-events: auto;
+}
+
+/* ─── BAND ───────────────────────────────────────────────────────── */
+.band{background:var(--blue);padding-block:3rem;}
+.band-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:2rem;}
+@media(min-width:768px){.band-grid{grid-template-columns:repeat(4,1fr);}}
+.band-item{text-align:center;}
+.band-num{font-size:clamp(2rem,4vw,3rem);font-weight:800;color:var(--yellow);line-height:1;}
+.band-label{font-size:.8rem;color:rgba(255,255,255,.65);letter-spacing:.06em;text-transform:uppercase;margin-top:.35rem;}
+
+/* ─── PROSE / LONG FORM ──────────────────────────────────────────── */
+.prose p{font-size:1.05rem;line-height:1.8;color:var(--grey-500);margin-bottom:1.25rem;}
+.prose h3{font-size:1.25rem;color:var(--blue);margin-top:2.5rem;margin-bottom:.75rem;padding-left:1rem;border-left:3px solid var(--yellow);}
+.prose p:last-child{margin-bottom:0;}
+
+/* ─── FEATURE CARDS ──────────────────────────────────────────────── */
+.feature-card{background:var(--white);border:1px solid var(--grey-200);border-radius:var(--r-md);padding:2rem;transition:transform .28s var(--ease),box-shadow .28s var(--ease),border-color .28s;}
+.feature-card:hover{transform:translateY(-4px);box-shadow:var(--shadow);border-color:var(--blue-20);}
+.feature-card::before{content:'';display:block;width:32px;height:3px;background:var(--yellow);margin-bottom:1.25rem;}
+.feature-card h3{font-size:1.15rem;color:var(--blue);margin-bottom:.5rem;}
+.feature-card p{font-size:.9rem;color:var(--grey-500);line-height:1.65;max-width:none;}
+
+/* ─── PROGRAM CARDS ──────────────────────────────────────────────── */
+.prog-card{background:var(--white);border:1px solid var(--blue-20);border-radius:var(--r-md);padding:2rem;display:flex;flex-direction:column;gap:1rem;transition:transform .28s var(--ease),box-shadow .28s;}
+.prog-card:hover{transform:translateY(-6px);box-shadow:var(--shadow-lg);}
+.prog-icon{font-size:2rem;line-height:1;}
+.prog-title{font-size:1.4rem;font-weight:700;color:var(--blue);}
+.prog-sub{font-size:.8rem;font-weight:600;color:var(--grey-500);text-transform:uppercase;letter-spacing:.06em;}
+.prog-desc{font-size:.9rem;color:var(--grey-500);line-height:1.7;flex:1;}
+.prog-meta{font-size:.8rem;font-weight:600;color:var(--blue-60);letter-spacing:.04em;padding-block:.75rem;border-top:1px solid var(--grey-200);border-bottom:1px solid var(--grey-200);}
+
+/* ─── MANIFESTO ──────────────────────────────────────────────────── */
+.manifesto-section{background:var(--blue-deep);}
+.manifesto-preamble p{font-size:1.05rem;line-height:1.85;color:rgba(255,255,255,.7);margin-bottom:1.25rem;}
+.commitment{display:flex;gap:1.5rem;padding-block:2rem;border-bottom:1px solid rgba(255,255,255,.1);}
+.commitment:first-of-type{border-top:1px solid rgba(255,255,255,.1);}
+.commit-n{font-size:clamp(2.5rem,5vw,4rem);font-weight:800;color:rgba(255,204,0,.2);line-height:1;flex-shrink:0;width:2.5ch;text-align:right;}
+.commit-body{}
+.commit-title{font-size:1.2rem;font-weight:700;color:var(--yellow);margin-bottom:.5rem;}
+.commit-text{font-size:.95rem;color:rgba(255,255,255,.65);line-height:1.75;}
+.refuses-grid{display:grid;grid-template-columns:1fr;gap:1.25rem;}
+@media(min-width:640px){.refuses-grid{grid-template-columns:1fr 1fr;}}
+@media(min-width:900px){.refuses-grid{grid-template-columns:1fr 1fr 1fr;}}
+.refuse-card{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:var(--r-md);padding:1.5rem;}
+.refuse-title{font-size:1rem;font-weight:700;color:var(--yellow);margin-bottom:.5rem;}
+.refuse-body{font-size:.875rem;color:rgba(255,255,255,.55);line-height:1.7;}
+
+/* ─── FAQ ────────────────────────────────────────────────────────── */
+.faq-section{background:var(--off-white);}
+.faq-controls{display:flex;flex-wrap:wrap;gap:.75rem;margin-bottom:2rem;align-items:center;}
+.faq-search{flex:1;min-width:220px;max-width:360px;position:relative;}
+.faq-search input{width:100%;padding:.6rem 1rem .6rem 2.5rem;border:2px solid var(--blue-20);border-radius:var(--r-md);font-size:.9rem;background:var(--white);transition:border-color .15s;}
+.faq-search input:focus{outline:none;border-color:var(--blue);}
+.faq-search .si{position:absolute;left:.75rem;top:50%;transform:translateY(-50%);color:var(--grey-500);pointer-events:none;font-size:.85rem;}
+.faq-cats{display:flex;flex-wrap:wrap;gap:.5rem;}
+.cat-btn{padding:.4rem 1rem;font-size:.8rem;font-weight:600;letter-spacing:.04em;text-transform:uppercase;background:var(--white);border:2px solid var(--blue-20);border-radius:20px;color:var(--blue);cursor:pointer;transition:background .15s,color .15s,border-color .15s;}
+.cat-btn:hover{border-color:var(--blue);}
+.cat-btn.active{background:var(--blue);color:var(--white);border-color:var(--blue);}
+.faq-list{display:flex;flex-direction:column;gap:.5rem;}
+.faq-item{background:var(--white);border:1px solid var(--grey-200);border-radius:var(--r-md);overflow:hidden;}
+.faq-item.open{border-color:var(--blue-20);box-shadow:var(--shadow);}
+.faq-q{width:100%;display:flex;align-items:center;justify-content:space-between;padding:1.25rem 1.5rem;background:var(--white);text-align:left;border:none;font-size:1rem;font-weight:600;color:var(--grey-800);gap:1rem;cursor:pointer;transition:background .15s,color .15s;line-height:1.35;}
+.faq-q:hover{background:var(--blue-10);}
+.faq-item.open .faq-q{background:var(--blue);color:var(--white);}
+.faq-icon{flex-shrink:0;width:22px;height:22px;display:flex;align-items:center;justify-content:center;background:var(--blue-10);border-radius:50%;font-size:.85rem;font-weight:700;color:var(--blue);transition:transform .28s var(--ease),background .15s,color .15s;}
+.faq-item.open .faq-icon{transform:rotate(45deg);background:rgba(255,255,255,.2);color:var(--white);}
+.faq-ans{max-height:0;overflow:hidden;transition:max-height .45s var(--ease);}
+.faq-ans-inner{padding:1.25rem 1.5rem;font-size:.95rem;line-height:1.8;color:var(--grey-500);background:var(--off-white);}
+.faq-ans-inner p{font-size:.95rem;max-width:none;}
+.faq-none{display:none;text-align:center;padding:3rem;color:var(--grey-500);}
+
+/* ─── CONTACT / FORM ─────────────────────────────────────────────── */
+.contact-section{background:var(--blue-deep);position:relative;overflow:hidden;}
+.contact-section::before{content:'';position:absolute;right:-200px;top:-200px;width:600px;height:600px;background:radial-gradient(circle,rgba(0,51,153,.5) 0%,transparent 70%);pointer-events:none;}
+.contact-grid{display:grid;grid-template-columns:1fr;gap:3rem;}
+@media(min-width:900px){.contact-grid{grid-template-columns:1fr 1.4fr;align-items:start;}}
+.contact-copy .label{color:rgba(255,255,255,.45);}
+.contact-copy h2{color:var(--white);margin-bottom:1rem;}
+.contact-copy p{color:rgba(255,255,255,.65);max-width:36ch;}
+.contact-points{margin-top:2rem;display:flex;flex-direction:column;gap:.6rem;}
+.contact-point{font-size:.875rem;color:rgba(255,255,255,.6);display:flex;align-items:center;gap:.5rem;}
+.contact-point::before{content:'✓';color:var(--yellow);}
+.form-card{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:var(--r-lg);padding:2rem;backdrop-filter:blur(10px);}
+.form-row{display:grid;grid-template-columns:1fr;gap:1rem;}
+@media(min-width:540px){.form-row{grid-template-columns:1fr 1fr;}}
+.form-group{display:flex;flex-direction:column;gap:.4rem;}
+.form-group.full{grid-column:1/-1;}
+.form-group label{font-size:.8rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:rgba(255,255,255,.75);}
+.form-group input,.form-group select,.form-group textarea{padding:.7rem 1rem;background:rgba(255,255,255,.09);border:1px solid rgba(255,255,255,.2);border-radius:var(--r);color:var(--white);font-size:.95rem;width:100%;transition:border-color .15s,background .15s;}
+.form-group select option{background:var(--blue-deep);color:var(--white);}
+.form-group input::placeholder,.form-group textarea::placeholder{color:rgba(255,255,255,.3);}
+.form-group input:focus,.form-group select:focus,.form-group textarea:focus{outline:none;border-color:var(--yellow);background:rgba(255,255,255,.13);}
+.form-privacy{grid-column:1/-1;font-size:.75rem;color:rgba(255,255,255,.4);line-height:1.6;margin-top:.5rem;}
+.form-submit{grid-column:1/-1;}
+
+/* ─── FOOTER ─────────────────────────────────────────────────────── */
+.site-footer{background:var(--black);padding-block:3rem;}
+.footer-inner{display:grid;grid-template-columns:1fr;gap:2rem;}
+@media(min-width:768px){.footer-inner{grid-template-columns:1.5fr 1fr 1fr;align-items:start;}}
+.ft-brand{}
+.ft-logo{font-size:1.1rem;font-weight:800;color:var(--white);text-transform:uppercase;letter-spacing:.04em;margin-bottom:.5rem;}
+.ft-logo span{color:var(--yellow);}
+.ft-tag{font-size:.85rem;color:rgba(255,255,255,.4);line-height:1.55;max-width:28ch;}
+.ft-a11y{font-size:.75rem;color:rgba(255,255,255,.25);margin-top:1.5rem;}
+.ft-col-head{font-size:.75rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.35);margin-bottom:.9rem;}
+.ft-col ul{display:flex;flex-direction:column;gap:.5rem;}
+.ft-col a{font-size:.875rem;color:rgba(255,255,255,.55);transition:color .15s;}
+.ft-col a:hover{color:var(--white);text-decoration:none;}
+.ft-rule{border:none;border-top:1px solid rgba(255,255,255,.08);margin-block:2rem;}
+.ft-bottom{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:1rem;font-size:.75rem;color:rgba(255,255,255,.3);}
+.ft-legal{display:flex;gap:1.5rem;}
+.ft-legal a{color:rgba(255,255,255,.4);transition:color .15s;}
+.ft-legal a:hover{color:var(--white);}
+
+/* ─── BACK TO TOP ────────────────────────────────────────────────── */
+.btt{position:fixed;bottom:2rem;right:2rem;width:44px;height:44px;background:var(--blue);color:var(--white);border:none;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1rem;cursor:pointer;box-shadow:var(--shadow);opacity:0;pointer-events:none;transform:translateY(12px);transition:opacity .28s,transform .28s,background .15s;z-index:50;}
+.btt.vis{opacity:1;pointer-events:auto;transform:translateY(0);}
+.btt:hover{background:var(--blue-dark);transform:translateY(-2px);}
+
+/* ─── SCROLL REVEAL ──────────────────────────────────────────────── */
+.reveal{opacity:0;transform:translateY(20px);transition:opacity .5s var(--ease),transform .5s var(--ease);}
+.reveal.in{opacity:1;transform:translateY(0);}
+.d1{transition-delay:.1s;}.d2{transition-delay:.2s;}.d3{transition-delay:.3s;}.d4{transition-delay:.4s;}
+
+/* ─── Reduced motion ─────────────────────────────────────────────── */
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important;}.reveal{opacity:1;transform:none;}}
+
+/* ─── Reading progress (manifesto) ──────────────────────────────── */
+.rp{position:fixed;top:60px;left:0;height:2px;background:var(--yellow);z-index:99;width:0%;transition:width .1s linear;}
+
+/* ─── Video embed ────────────────────────────────────────────────── */
+.video-wrap{position:relative;width:100%;border-radius:var(--r-lg);overflow:hidden;border:1px solid rgba(255,255,255,.15);}
+
+/* ─── Utility ────────────────────────────────────────────────────── */
+.text-center{text-align:center;}.mt4{margin-top:1rem;}.mt8{margin-top:2rem;}.mt12{margin-top:3rem;}
+.bg-alt{background:var(--off-white);}
+</style>
 </head>
 <body>
-<!-- partial:index.partial.html -->
-<link href='https://fonts.googleapis.com/css?family=Exo:400,900' rel='stylesheet' type='text/css'>
-<div class="wrapper">
-  <div class="message">
-    <h1>Startup Europe</h1>    
-    <p>European Startup Ecosystem Initiative</p>
+
+<!-- Skip link -->
+<a class="skip" href="#main">Skip to main content</a>
+
+<!-- Reading progress bar (visible on scroll) -->
+<div class="rp" id="rp" role="progressbar" aria-label="Reading progress" aria-valuemin="0" aria-valuemax="100"></div>
+
+<!-- ═══════════════════════════════════════════════════════════
+     HEADER
+════════════════════════════════════════════════════════════ -->
+<header class="site-header" role="banner" id="top">
+  <div class="container">
+    <div class="hdr-inner">
+      <a href="#top" class="hdr-logo" aria-label="Startup Europe — home">
+        <span>Startup <em>Europe</em></span>
+      </a>
+
+      <nav class="hdr-nav" aria-label="Main navigation">
+        <a href="#why-europe">Why Europe</a>
+        <a href="#thesis">Thesis</a>
+        <a href="#faq">FAQ</a>
+        <a href="#contact">Join</a>
+      </nav>
+
+      <a href="#contact" class="btn btn-primary btn-sm hdr-cta">Join the mission</a>
+
+      <button class="mob-btn" aria-expanded="false" aria-controls="mob-nav" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+  <nav class="mob-nav" id="mob-nav" aria-label="Mobile navigation">
+    <a href="#why-europe">Why Europe</a>
+    <a href="#thesis">Thesis</a>
+    <a href="#faq">FAQ</a>
+    <a href="#contact">Join</a>
+  </nav>
+</header>
+
+<!-- ═══════════════════════════════════════════════════════════
+     MAIN
+════════════════════════════════════════════════════════════ -->
+<main id="main">
+
+<!-- ─── HERO ─────────────────────────────────────────────────────── -->
+<section id="hero" aria-label="Hero">
+  <canvas id="c"></canvas>
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <div class="container">
+      <div class="hero-inner">
+
+        <h1>Build the<br><em>European Dream.</em></h1>
+        <p class="lead"><strong style="color:var(--white)">450 million consumers. €18 trillion economy. One Single Market.</strong> Build in Europe and you can go from one city to a continent — with world-class talent, deep industry, and trust as a competitive advantage.</p>
+        <div class="hero-ctas">
+          <a href="#contact" class="btn btn-primary btn-lg">Join the mission</a>
+          <a href="#thesis" class="btn btn-secondary btn-lg">Read the Founder Thesis</a>
+        </div>
+        <div class="hero-stats">
+          <div class="hero-stat"><strong>450M</strong><span>EU consumers</span></div>
+          <div class="hero-stat"><strong>€18T</strong><span>Single Market</span></div>
+          <div class="hero-stat"><strong>606</strong><span>European unicorns</span></div>
+          <div class="hero-stat"><strong>27</strong><span>Member states</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── WHY EUROPE ────────────────────────────────────────────────── -->
+<section class="section section--lg" id="why-europe" aria-labelledby="why-h">
+  <div class="container">
+    <div class="label">Our case</div>
+    <h2 id="why-h" class="reveal" style="max-width:22ch;margin-bottom:1.5rem">Why Europe is the world's best-kept startup secret.</h2>
+    <p class="lead reveal d1" style="margin-bottom:4rem;max-width:60ch">The standard pitch for European tech starts with the problems: fragmented markets, slow capital, regulatory friction. Founders who believe that pitch build accordingly — small, local, cautious. They are wrong about what those problems mean.</p>
+
+    <div class="grid2" style="gap:4rem;align-items:start">
+      <div class="prose reveal d1">
+        <p>Here is what Europe actually is, stripped of the narrative overlay: it is the only region on earth where you can access a €18 trillion economy and 450 million consumers in a single market, a deep industrial infrastructure across automotive, aerospace, energy, pharma, and food, world-class research institutions with genuine technology transfer pipelines, structured public procurement at scale, a regulatory environment that is simultaneously the most demanding and the most globally influential, and a talent pool that includes the strongest concentration of applied scientists outside of the United States. Every one of those features looks like a burden from inside a small-market mindset. From a systems perspective, they are architecture.</p>
+
+        <h3>Talent density that most founders ignore</h3>
+        <p>Europe produces more engineering PhDs per year than the US. Nine of the world's top thirty universities for computer science are in Europe. The real problem has never been talent — it has been distribution. Founders from Munich who refuse to hire from Warsaw, Lisbon, and Tallinn are leaving the best part of Europe on the table. When cross-border hiring is the default — not the exception — you access the deepest talent pool in the hemisphere at compensation structures that remain globally competitive.</p>
+
+        <h3>Industrial base as proof-of-concept infrastructure</h3>
+        <p>No other region on earth offers a deep-tech startup the same density of potential pilot partners within a two-hour flight. The German Mittelstand alone represents 3.5 million companies — many of them world market leaders in niche manufacturing, hungry for innovation partners who understand their operational context. The same is true of French industrial groups, Nordic energy companies, and the embedded manufacturing base across Poland, Czech Republic, and Slovakia. If your startup solves a real problem in materials, logistics, energy, or agriculture, Europe is the best place on earth to find a paying reference customer within 18 months. That reference customer becomes your moat.</p>
+
+        <h3>Regulation as a scaling mechanism</h3>
+        <p>The GDPR was widely reported as a startup-killer. It turned out to be a global product standard that European companies were, by definition, already compliant with. The same dynamic is now unfolding with the AI Act, the Digital Markets Act, the European Health Data Space, and the Carbon Border Adjustment Mechanism. Compliance is expensive for incumbents. For startups that design for it from day one, it is a distribution advantage — because every enterprise customer in every regulated industry on earth will eventually need to meet European standards. Building in Europe means you get there first.</p>
+      </div>
+
+      <div class="reveal d2">
+        <div class="prose" style="margin-bottom:2.5rem">
+          <h3>The climate and energy imperative</h3>
+          <p>Europe has committed more capital, more policy bandwidth, and more industrial redesign capacity to the energy transition than any comparable bloc. Heat pumps, green hydrogen, synthetic fuels, grid-scale storage, industrial decarbonisation, carbon capture, precision fermentation — these are not future markets. They are funded, contracted, and partially deployed today. The funding mechanisms — from EU taxonomy-aligned debt to national green investment banks to Horizon Europe grants — are unusually accessible for deep-tech startups with genuine technology. Founders who understand this landscape have a structural advantage that no US or Asian competitor can replicate.</p>
+
+          <h3>Public procurement as the underrated channel</h3>
+          <p>EU public procurement totals roughly €2 trillion annually. Most of it is inaccessible to startups because they do not know the process. This is not a reason to ignore it — it is a reason to learn it. A startup that lands even a mid-sized public sector contract in one EU country has a template that can be replicated across 26 more. Governments that buy from you become the most defensible reference customers you can have.</p>
+
+          <h3>The research institution pipeline</h3>
+          <p>The EU's Horizon Europe programme has a ~€93.5B indicative budget for 2021–2027 — the world's largest public research and innovation funding mechanism. The technology coming out of European universities in quantum, materials science, synthetic biology, photonics, and robotics is world-class and significantly undercommercialized. The gap between research and market is not a failure; it is an opportunity. Founders who can bridge that gap have access to dealflow that most venture-backed operators have not yet noticed.</p>
+
+          <h3>None of this means Europe is easy.</h3>
+          <p>The paperwork is real. The cultural variance across markets is real. Capital cycles are slower. But difficulty is not disadvantage — difficulty is the filter that keeps out the founders who would have failed anyway. The ones who stay, learn the terrain, and build for it end up with something no Bay Area founder can replicate: a business that is genuinely global from day one, with a regulatory moat, an industrial reference network, and a talent pool that most of their competitors do not know how to access.</p>
+        </div>
+
+        <!-- Key facts block -->
+        <div style="background:var(--blue-10);border-radius:var(--r-lg);padding:1.75rem;border:1px solid var(--blue-20)">
+          <div class="label" style="margin-bottom:1rem">Key facts · <a href="https://commission.europa.eu/topics/single-market_en" target="_blank" rel="noopener" style="font-size:.7rem;color:var(--blue);text-transform:none;letter-spacing:0">European Commission</a></div>
+          <div style="display:flex;flex-direction:column;gap:.9rem">
+            <div style="display:flex;gap:.75rem;align-items:flex-start">
+              <span style="color:var(--yellow);font-size:1.1rem;flex-shrink:0">⬡</span>
+              <p style="font-size:.9rem;color:var(--grey-500);max-width:none;margin:0"><strong style="color:var(--blue)">€18 trillion economy</strong> — EU Single Market, one of the world's largest economic blocs</p>
+            </div>
+            <div style="display:flex;gap:.75rem;align-items:flex-start">
+              <span style="color:var(--yellow);font-size:1.1rem;flex-shrink:0">⬡</span>
+              <p style="font-size:.9rem;color:var(--grey-500);max-width:none;margin:0"><strong style="color:var(--blue)">450 million consumers</strong> — accessible under a single regulatory and trade framework</p>
+            </div>
+            <div style="display:flex;gap:.75rem;align-items:flex-start">
+              <span style="color:var(--yellow);font-size:1.1rem;flex-shrink:0">⬡</span>
+              <p style="font-size:.9rem;color:var(--grey-500);max-width:none;margin:0"><strong style="color:var(--blue)">~€93.5B Horizon Europe budget</strong> — world's largest public R&amp;I funding programme, 2021–2027</p>
+            </div>
+            <div style="display:flex;gap:.75rem;align-items:flex-start">
+              <span style="color:var(--yellow);font-size:1.1rem;flex-shrink:0">⬡</span>
+              <p style="font-size:.9rem;color:var(--grey-500);max-width:none;margin:0"><strong style="color:var(--blue)">~€584B electricity grid investment</strong> — needed across Europe by 2030 (European Commission)</p>
+            </div>
+            <div style="display:flex;gap:.75rem;align-items:flex-start">
+              <span style="color:var(--yellow);font-size:1.1rem;flex-shrink:0">⬡</span>
+              <p style="font-size:.9rem;color:var(--grey-500);max-width:none;margin:0"><strong style="color:var(--blue)">3.5M Mittelstand companies</strong> — world-leading niche manufacturers seeking technology partners</p>
+            </div>
+            <div style="display:flex;gap:.75rem;align-items:flex-start">
+              <span style="color:var(--yellow);font-size:1.1rem;flex-shrink:0">⬡</span>
+              <p style="font-size:.9rem;color:var(--grey-500);max-width:none;margin:0"><strong style="color:var(--blue)">606 European unicorns</strong> — cumulative, Q1 2025 (Dealroom). The ecosystem has never been deeper.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── METRICS BAND ──────────────────────────────────────────────── -->
+<div class="band" role="region" aria-label="Key statistics">
+  <div class="container">
+    <div class="band-grid">
+      <div class="band-item"><div class="band-num" data-count="450" data-suf="M">450M</div><div class="band-label">Consumers · EU Single Market</div></div>
+      <div class="band-item"><div class="band-num" data-count="18" data-suf="T€">18T€</div><div class="band-label">Economy · EU Single Market</div></div>
+      <div class="band-item"><div class="band-num" data-count="2" data-suf="T€+">2T€+</div><div class="band-label">Annual public procurement</div></div>
+      <div class="band-item"><div class="band-num" data-count="606" data-suf="">606</div><div class="band-label">European unicorns · Q1 2025</div></div>
+    </div>
+    <p style="text-align:center;font-size:.72rem;color:rgba(255,255,255,.35);margin-top:1.25rem">Sources: <a href="https://commission.europa.eu/topics/single-market_en" target="_blank" rel="noopener" style="color:rgba(255,255,255,.45);text-decoration:underline">European Commission Single Market</a> · <a href="https://dealroom.co/uploaded/2025/04/Dealroom-Europe-Q1-2025-report.pdf" target="_blank" rel="noopener" style="color:rgba(255,255,255,.45);text-decoration:underline">Dealroom Q1 2025</a></p>
   </div>
 </div>
-<!-- partial -->
-  
+
+<!-- ─── PLAYBOOK / 7 PRINCIPLES ───────────────────────────────────── -->
+<section class="section bg-alt" id="playbook" aria-labelledby="pb-h">
+  <div class="container">
+    <div class="label">Operating principles</div>
+    <h2 id="pb-h" class="reveal" style="margin-bottom:.75rem">The Founder's Playbook for Europe</h2>
+    <p class="lead reveal d1" style="margin-bottom:3rem;max-width:58ch">Seven principles extracted from the founders who scaled cross-border. Not theory. Operational specifics.</p>
+    <div class="grid3" style="gap:1.5rem">
+      <article class="feature-card reveal d1">
+        <h3>01 — Design for multilingual distribution from week one.</h3>
+        <p>Language is not a localisation problem — it is a product architecture decision. Build translation and locale-switching into your core infrastructure before you need it. The founders who retrofit multilingual support at Series A spend 3–6 months fixing what could have been one sprint.</p>
+      </article>
+      <article class="feature-card reveal d2">
+        <h3>02 — Treat regulation as a product specification.</h3>
+        <p>Every EU directive is a product brief. GDPR told you exactly what the enterprise data-handling product looks like. The AI Act tells you what the responsible AI product looks like. Read the regulation, map it to user needs, and ship the product your customers will eventually be required to buy.</p>
+      </article>
+      <article class="feature-card reveal d3">
+        <h3>03 — Cross-border hiring is not a benefit — it is the strategy.</h3>
+        <p>The best frontend engineers are in Tallinn. The best bioprocess engineers are in Leuven. The best fintech compliance specialists are in Warsaw. Your headquarters is wherever you incorporate; your team is European. EOR tools have made this operational. There is no excuse for monocultural hiring.</p>
+      </article>
+      <article class="feature-card reveal d1">
+        <h3>04 — Pilot with industry, not just with users.</h3>
+        <p>European deep tech is validated with reference customers, not user interviews. Find the Mittelstand company, the national grid operator, or the hospital network who will sign a paid pilot. That contract is your Series A pitch deck. It de-risks the science and proves the commercial thesis simultaneously.</p>
+      </article>
+      <article class="feature-card reveal d2">
+        <h3>05 — Use grants to buy time, not to avoid risk.</h3>
+        <p>Horizon Europe, EIC Accelerator — use them. But draw a hard line: grant revenue is not ARR. Build the commercial model from day one. The founders who become grant-dependent stop selling and stop learning. Use the money, not the identity.</p>
+      </article>
+      <article class="feature-card reveal d3">
+        <h3>06 — Build cross-border partnerships before cross-border sales.</h3>
+        <p>Your second market entry is 80% easier if you have a local operator partner who knows the procurement cycle, the regulator, and the top five enterprise buyers. Invest in partnerships early — not reseller agreements, but genuine co-development relationships.</p>
+      </article>
+      <article class="feature-card reveal d1">
+        <h3>07 — Name your market size in European, not in American.</h3>
+        <p>The EU's chemical industry is larger than the US equivalent. The European energy grid alone requires ~€584B in investment by 2030. Stop sizing markets in USD TAM comparisons that make Europe look small. Size them in euros, in specific sectors, with named buyers. Investors who understand Europe will fund that story.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+
+<!-- ─── MANIFESTO / FOUNDER THESIS ───────────────────────────────── -->
+<section class="manifesto-section section--lg" id="thesis" aria-labelledby="man-h">
+  <div class="container" style="max-width:860px">
+    <div class="label" style="color:rgba(255,255,255,.4)">The case for Europe</div>
+    <h2 id="man-h" class="reveal" style="color:var(--white);margin-bottom:1.5rem">The European Founder Thesis</h2>
+
+    <div class="manifesto-preamble reveal d1" style="margin-bottom:2.5rem">
+      <p>Europe rewards builders who think in systems and ship in the real economy. The founders who thrive here are not the ones who avoid complexity — they are the ones who turn complexity into defensibility. A company built to operate across 27 member states, serve enterprise customers in regulated industries, and hire from the deepest talent pool in the hemisphere is not a small company. It is a resilient one.</p>
+      <p>This is not a set of rules. It is an argument: that Europe, understood properly, is one of the best places on earth to build a company with genuine scale and genuine consequence.</p>
+    
+
+    <!-- video embed -->
+    <div class="video-wrap">
+      <video
+        autoplay
+        muted
+        loop
+        playsinline
+        preload="auto"
+        style="width:100%;height:100%;object-fit:cover;"
+      >
+        <source src="startupeurope.mp4" type="video/mp4">
+      </video>
+    </div>
+<p><i>Former European Commissioner Neelie Kroes on startups in Europe</i></p>
+</div>
+
+    <h3 style="color:rgba(255,255,255,.4);font-size:.85rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;margin-bottom:1.5rem">Ten operating commitments</h3>
+    <div class="commitments">
+      <div class="commitment reveal d1">
+        <div class="commit-n">1</div>
+        <div class="commit-body">
+          <div class="commit-title">We work only on operational problems.</div>
+          <p class="commit-text">Every programme, briefing, and community gathering must produce a concrete output for the founder who attends. Not inspiration. Not network. Tangible outputs: a signed pilot agreement, a cleared compliance question, a cross-border hiring structure. If an activity cannot be linked to an output, we do not run it.</p>
+        </div>
+      </div>
+      <div class="commitment reveal d1">
+        <div class="commit-n">2</div>
+        <div class="commit-body">
+          <div class="commit-title">We treat Europe as one system, not 27 separate ones.</div>
+          <p class="commit-text">We organise our thinking by market dynamics, regulatory frameworks, talent pools, and industrial clusters — all of which cut across national borders. We acknowledge national specifics when they are operationally material. We do not use them as an excuse to think small.</p>
+        </div>
+      </div>
+      <div class="commitment reveal d1">
+        <div class="commit-n">3</div>
+        <div class="commit-body">
+          <div class="commit-title">We are honest about what is hard.</div>
+          <p class="commit-text">Cross-border VAT compliance is genuinely painful. Employment law divergence is a real operational cost. Capital cycles are slower than in the US. We do not pretend otherwise. Our commitment is to help founders solve these problems with the best available tools — not to pretend the problems do not exist.</p>
+        </div>
+      </div>
+      <div class="commitment reveal d2">
+        <div class="commit-n">4</div>
+        <div class="commit-body">
+          <div class="commit-title">We do not conflate activity with progress.</div>
+          <p class="commit-text">A founder who attends 40 events and has no new customers, no new hires, and no new capital has not made progress. We measure outputs. We track what we said we would do against what we actually did. We share those numbers — including the ones that do not reflect well on us.</p>
+        </div>
+      </div>
+      <div class="commitment reveal d2">
+        <div class="commit-n">5</div>
+        <div class="commit-body">
+          <div class="commit-title">We give the same advice regardless of who is listening.</div>
+          <p class="commit-text">No sponsor gets a better answer. No large company partner changes what we say to a founder asking about procurement. Our practitioner sessions are independent. If a partner's interests conflict with a founder's interests, we say so in the room.</p>
+        </div>
+      </div>
+      <div class="commitment reveal d3">
+        <div class="commit-n">6</div>
+        <div class="commit-body">
+          <div class="commit-title">We work with the best people, not the most famous ones.</div>
+          <p class="commit-text">Our speakers, mentors, and operators are selected because they have done the specific thing they are talking about. A founder who successfully scaled from Berlin to Warsaw in a regulated sector is more valuable to our cohort than a famous VC who has invested in that sector.</p>
+        </div>
+      </div>
+      <div class="commitment reveal d3">
+        <div class="commit-n">7</div>
+        <div class="commit-body">
+          <div class="commit-title">We publish what we learn.</div>
+          <p class="commit-text">Playbooks, frameworks, contract templates, regulatory maps, hiring guides — everything we build that is not commercially sensitive gets published. We believe that better-equipped founders build better companies, and better companies build better Europe.</p>
+        </div>
+      </div>
+      <div class="commitment reveal d1">
+        <div class="commit-n">8</div>
+        <div class="commit-body">
+          <div class="commit-title">We are funded by people whose interests align with good founder outcomes.</div>
+          <p class="commit-text">Our funding comes from founders who have exited, from corporate partners who need innovation partners, and from membership fees. We do not take government funding that comes with reporting requirements that compromise our independence. We do not take money from investors whose deal flow we might influence.</p>
+        </div>
+      </div>
+      <div class="commitment reveal d2">
+        <div class="commit-n">9</div>
+        <div class="commit-body">
+          <div class="commit-title">We actively recruit the people who are not in the room.</div>
+          <p class="commit-text">The default European tech ecosystem is demographically narrow. We actively recruit founders from Central and Eastern Europe, Southern Europe, and the Balkans — and from backgrounds that are underrepresented in tech: industrial operators, scientists, policy practitioners, second-time founders from non-tech sectors.</p>
+        </div>
+      </div>
+      <div class="commitment reveal d3">
+        <div class="commit-n">10</div>
+        <div class="commit-body">
+          <div class="commit-title">We stop when we are no longer useful.</div>
+          <p class="commit-text">This organisation exists to solve a specific set of problems. When cross-border company-building in Europe is as operationally legible as it is in the US — we will have succeeded. We do not seek institutional permanence. We seek to make ourselves unnecessary.</p>
+        </div>
+      </div>
+    </div>
+
+    <div style="margin-top:4rem">
+      <h3 style="color:rgba(255,255,255,.4);font-size:.85rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;margin-bottom:1.5rem">What we refuse</h3>
+      <div class="refuses-grid">
+        <div class="refuse-card reveal d1">
+          <div class="refuse-title">Fragmented thinking</div>
+          <p class="refuse-body">Europe's diversity is not primarily a liability. Fragmented thinking produces fragmented products, teams, and ambitions. Founders who build for "the German market" first and plan to "go European later" are typically three years behind the founders who built European from the start.</p>
+        </div>
+        <div class="refuse-card reveal d2">
+          <div class="refuse-title">Small-market mindset</div>
+          <p class="refuse-body">The EU is the world's largest single market. A startup operating in health, energy, mobility, logistics, or industrial software inside the EU has access to a larger addressable market than any US startup that has not yet expanded to Europe. Size your opportunity accordingly.</p>
+        </div>
+        <div class="refuse-card reveal d3">
+          <div class="refuse-title">Grant theater</div>
+          <p class="refuse-body">We refuse the pattern in which founders build organisations around the annual grant calendar. Grant funding is real capital and should be used with serious commercial intent. A company whose primary revenue is grant revenue and whose primary activity is grant writing is not a startup.</p>
+        </div>
+        <div class="refuse-card reveal d1">
+          <div class="refuse-title">Monoculture teams</div>
+          <p class="refuse-body">Hiring everyone from the same city, university, or national background produces slower, less creative, more fragile companies. Monoculture teams are increasingly a red flag for sophisticated European investors who understand what cross-border scale actually requires.</p>
+        </div>
+        <div class="refuse-card reveal d2">
+          <div class="refuse-title">Single-gatekeeper dependency</div>
+          <p class="refuse-body">We do not encourage founders to optimise their businesses for access to any single institution — one accelerator, one government programme, one corporate partner. Concentration creates fragility. Diversified stakeholder relationships create resilience.</p>
+        </div>
+        <div class="refuse-card reveal d3">
+          <div class="refuse-title">Advice without skin in the game</div>
+          <p class="refuse-body">Panel discussions featuring people who have never been responsible for a payroll, a regulatory submission, or a failed product launch are not useful to founders. We are committed about who we invite into the room when founders are listening.</p>
+        </div>
+      </div>
+    </div>
+
+    <div style="margin-top:4rem;padding:2.5rem;background:rgba(255,204,0,.08);border:1px solid rgba(255,204,0,.25);border-radius:var(--r-lg)" class="reveal">
+      <h3 style="color:var(--white);font-size:1.5rem;margin-bottom:1rem">The call to build.</h3>
+      <p style="color:rgba(255,255,255,.65);font-size:1rem;line-height:1.8;max-width:56ch;margin-bottom:1rem">Europe needs more founders who treat the continent as their home market. Not because it is easy, but because it is where the largest structural problems of the next fifty years are concentrated, where the regulatory and industrial capacity to address them exists, and where a serious founder can build a business of genuine scale and genuine consequence.</p>
+      <a href="#contact" class="btn btn-primary">Join the mission →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ─── FAQ ───────────────────────────────────────────────────────── -->
+<section class="faq-section section" id="faq" aria-labelledby="faq-h">
+  <div class="container" style="max-width:900px">
+    <div class="label">Common questions</div>
+    <h2 id="faq-h" class="reveal" style="margin-bottom:.75rem">Frequently asked questions</h2>
+    <p class="lead reveal d1" style="margin-bottom:2.5rem;max-width:54ch">Questions from founders building cross-border companies in Europe.</p>
+
+    <div class="faq-controls">
+      <div class="faq-search">
+        <span class="si" aria-hidden="true">🔍</span>
+        <label for="faq-input" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0)">Search FAQs</label>
+        <input type="search" id="faq-input" placeholder="Search questions…" autocomplete="off">
+      </div>
+      <div class="faq-cats" role="group" aria-label="Filter by category">
+        <button class="cat-btn active" data-cat="All">All</button>
+        <button class="cat-btn" data-cat="Funding">Funding</button>
+        <button class="cat-btn" data-cat="Hiring">Hiring</button>
+        <button class="cat-btn" data-cat="Sales">Cross-border sales</button>
+        <button class="cat-btn" data-cat="Regulation">Regulation</button>
+        <button class="cat-btn" data-cat="Deep tech">Deep tech</button>
+        <button class="cat-btn" data-cat="Community">Community</button>
+      </div>
+    </div>
+
+    <div class="faq-list" id="faq-list">
+
+      <!-- FUNDING -->
+      <div class="faq-item" data-cat="Funding">
+        <button class="faq-q" aria-expanded="false">What are the main EU funding mechanisms for early-stage startups? <span class="faq-icon" aria-hidden="true">+</span></button>
+        <div class="faq-ans"><div class="faq-ans-inner"><p>The primary mechanisms are: <strong>EIC Accelerator</strong> (up to €2.5M grant + up to €10M equity investment for SMEs), <strong>EIC Pathfinder</strong> (up to €3M for breakthrough research), <strong>Horizon Europe Innovation Actions</strong> (competitive grants for consortium projects, ~€93.5B budget 2021–2027), and <strong>EIF-backed national VC funds</strong> through InvestEU. The right instrument depends on your TRL level, team structure, and commercial maturity. Most successful deep-tech founders stack instruments — using a Pathfinder grant to validate science, then applying for EIC Accelerator once commercial traction exists. Note: grant disbursements are slower than VC closings; plan your cash flow assuming tranches arrive 6–12 weeks late.</p></div></div>
+      </div>
+      <div class="faq-item" data-cat="Funding">
+        <button class="faq-q" aria-expanded="false">Can I raise EU grants and private VC simultaneously? <span class="faq-icon" aria-hidden="true">+</span></button>
+        <div class="faq-ans"><div class="faq-ans-inner"><p>Yes, and most successful deep-tech startups do. The key constraint is that EIC Accelerator grants cannot be used for the same costs co-financed by other EU instruments. VC equity is not a grant and does not create double-funding issues. The practical challenge is timeline alignment — plan accordingly and communicate grant timelines to your VC investor early.</p></div></div>
+      </div>
+      <div class="faq-item" data-cat="Funding">
+        <button class="faq-q" aria-expanded="false">What is the EIC Accelerator and how competitive is it? <span class="faq-icon" aria-hidden="true">+</span></button>
+        <div class="faq-ans"><div class="faq-ans-inner"><p>The EIC Accelerator provides grants of up to €2.5M and equity investments of up to €10M for innovative SMEs. It operates in two stages: Step 1 is a short remote assessment; Step 2 involves a full application and in-person pitch in Brussels. Overall success rates have historically been 5–8%. The most common rejection reason is insufficient evidence of market traction and a credible commercial model. Science alone is not sufficient — you need both.</p></div></div>
+      </div>
+      <div class="faq-item" data-cat="Funding">
+        <button class="faq-q" aria-expanded="false">How does European VC compare to US VC? <span class="faq-icon" aria-hidden="true">+</span></button>
+        <div class="faq-ans"><div class="faq-ans-inner"><p>European VC differs from US VC in several material ways. Average seed round sizes are smaller (€500K–€2M vs. $1M–$5M in the US), diligence timelines are longer (3–6 months in Europe vs. 6–12 weeks in active US markets), and follow-on capital is more constrained for later-stage rounds. That said, European seed and Series A valuations are catching up, and the best European firms are competitive globally. For deep tech specifically, the European VC market has some of the strongest specialist funds in the world.</p></div></div>
+      </div>
+      <div class="faq-item" data-cat="Funding">
+        <button class="faq-q" aria-expanded="false">Should I incorporate in a founder-friendly jurisdiction like the Netherlands or Estonia? <span class="faq-icon" aria-hidden="true">+</span></button>
+        <div class="faq-ans"><div class="faq-ans-inner"><p>Incorporation jurisdiction matters less than most founders think, but it does matter. The Netherlands (BV), Estonia (OÜ via e-Residency), and Luxembourg are commonly chosen for legal predictability and investor familiarity. The more important factor is where your management team is actually located — tax residency, VAT registration, and employment law are determined by operational presence, not incorporation address. Speak with a cross-border tax lawyer before making this decision.</p></div></div>
+      </div>
+
+      <!-- HIRING -->
+      <div class="faq-item" data-cat="Hiring">
+        <button class="faq-q" aria-expanded="false">How do I hire employees across EU countries without local entities? <span class="faq-icon" aria-hidden="true">+</span></button>
+        <div class="faq-ans"><div class="faq-ans-inner"><p>Employer of Record (EOR) services — such as Deel, Remote, Papaya Global, and Horizons — allow you to employ workers in countries where you have no legal entity. The EOR becomes the legal employer; you direct the work. EOR costs are typically 15–25% of salary on top of base compensation. This is the standard solution for cross-border hiring at seed and early Series A. Note: EOR does not work for co-founders or significant equity holders — those require proper legal structuring.</p></div></div>
+      </div>
+      <div class="faq-item" data-cat="Hiring">
+        <button class="faq-q" aria-expanded="false">What talent pools in Europe are underutilised by most founders? <span class="faq-icon" aria-hidden="true">+</span></button>
+        <div class="faq-ans"><div class="faq-ans-inner"><p>Poland, Romania, and Bulgaria have deep pools of senior software engineers with strong compensation competitiveness. The Baltic states (particularly Estonia and Lithuania) have the highest concentration of engineers per capita in the EU and a strong startup culture. The Czech Republic and Slovakia have excellent industrial engineering and hardware talent. Portugal (Lisbon) has rapidly become a node for product and design talent. Most Western European founders still default to local hiring — this is their primary competitive disadvantage.</p></div></div>
+      </div>
+      <div class="faq-item" data-cat="Hiring">
+        <button class="faq-q" aria-expanded="false">How does the EU Blue Card work for non-EU technical talent? <span class="faq-icon" aria-hidden="true">+</span></button>
+        <div class="faq-ans"><div class="faq-ans-inner"><p>The EU Blue Card is a work and residence permit for highly qualified non-EU nationals. Requirements: a higher education qualification and a job offer with a salary at least 1.5× the average gross annual salary in the host country (1× for shortage occupations including most tech roles). Processing times: legally capped at 90 days EU-wide after a complete application is submitted; real-world timelines vary significantly by city and current workload. The 2022 revised Blue Card Directive makes it significantly easier to move between member states. For hiring from India, Ukraine, or the US, this is the primary legal pathway.</p></div></div>
+      </div>
+      <div class="faq-item" data-cat="Hiring">
+        <button class="faq-q" aria-expanded="false">How do stock options work for employees across EU countries? <span class="faq-icon" aria-hidden="true">+</span></button>
+        <div class="faq-ans"><div class="faq-ans-inner"><p>Tax treatment of options at grant, vest, and exercise varies significantly by country. France has the most founder-friendly option regime (BSPCE). Germany reformed its ESOP taxation in 2021 but still has friction. Most other EU jurisdictions tax options at exercise as income, creating a cash flow problem for employees who cannot sell shares immediately. The best pan-European approach: structure a share option plan governed by your incorporation jurisdiction's law, and work with employees' local tax advisers to plan appropriately. Be transparent with candidates about this during the hiring process.</p></div></div>
+      </div>
+
+      <!-- SALES -->
+      <div class="faq-item" data-cat="Sales">
+        <button class="faq-q" aria-expanded="false">What is the fastest way to enter a second EU market? <span class="faq-icon" aria-hidden="true">+</span></button>
+        <div class="faq-ans"><div class="faq-ans-inner"><p>The fastest route is through an existing distribution partnership, not direct sales. Identify the incumbent system integrators, industry associations, or channel partners in your target market who already have the customer relationships and procurement trust. Negotiate a co-sell or resell agreement with revenue share. Your first market entry takes 12–18 months; your second, with a good partner, takes 6–9. The investment in finding the right partner is always worth it.</p></div></div>
+      </div>
+      <div class="faq-item" data-cat="Sales">
+        <button class="faq-q" aria-expanded="false">How do I handle VAT compliance when selling across EU member states? <span class="faq-icon" aria-hidden="true">+</span></button>
+        <div class="faq-ans"><div class="faq-ans-inner"><p>Since the EU VAT OSS (One Stop Shop) reform in July 2021, B2C digital services can be handled through a single registration in your home country up to €10,000 in cross-border B2C sales. For B2B sales within the EU, the reverse charge mechanism applies — no VAT is charged on cross-border invoices. Complex situations arise with physical goods and marketplace transactions. At any meaningful scale, work with a dedicated EU VAT specialist. Tools like Avalara and TaxJar help but do not replace judgment on edge cases.</p></div></div>
+      </div>
+      <div class="faq-item" data-cat="Sales">
+        <button class="faq-q" aria-expanded="false">What are the best channels for reaching enterprise buyers in Germany? <span class="faq-icon" aria-hidden="true">+</span></button>
+        <div class="faq-ans"><div class="faq-ans-inner"><p>Germany has a distinctive enterprise sales culture. Key channels: trade fairs (Hannover Messe for industrial, MEDICA for healthcare, Intersolar for energy), industry association working groups (Bitkom, VDMA, VDE), Mittelstand network partnerships, and warm introductions through professional services firms. Cold email outreach is significantly less effective in Germany than in the UK or the Nordics. Relationships precede contracts — plan for a longer sales cycle and invest in face-to-face meetings.</p></div></div>
+      </div>
+      <div class="faq-item" data-cat="Sales">
+        <button class="faq-q" aria-expanded="false">How do I qualify for EU public procurement as a startup? <span class="faq-icon" aria-hidden="true">+</span></button>
+        <div class="faq-ans"><div class="faq-ans-inner"><p>EU procurement is governed by Directive 2014/24/EU with SME-friendly provisions including contract splitting and reduced technical capacity requirements. Practically: find tenders on TED (Tenders Electronic Daily), look for contracts below the EU threshold on national platforms (more accessible), consider sub-contracting to a larger prime contractor first to build a track record, and look for innovation procurement frameworks like PCP (Pre-Commercial Procurement) and PPI (Public Procurement of Innovation), specifically designed for startups. Your first public sector contract will take 12–18 months from first contact to signed contract.</p></div></div>
+      </div>
+
+      <!-- REGULATION -->
+      <div class="faq-item" data-cat="Regulation">
+        <button class="faq-q" aria-expanded="false">What does the EU AI Act mean for my AI startup? <span class="faq-icon" aria-hidden="true">+</span></button>
+        <div class="faq-ans"><div class="faq-ans-inner"><p>The EU AI Act classifies AI systems by risk level. Most B2B productivity tools and general-purpose AI fall into the "limited risk" or "minimal risk" categories with light obligations (primarily transparency requirements). <strong>High-risk AI</strong> — used in hiring, credit scoring, healthcare diagnosis, critical infrastructure, or biometric identification — faces significant conformity assessment requirements, mandatory documentation, and human oversight obligations. If you are building in a high-risk category, design your compliance architecture from the start. Retroactive compliance is expensive. If you are not, ensure your transparency notices are in order.</p></div></div>
+      </div>
+      <div class="faq-item" data-cat="Regulation">
+        <button class="faq-q" aria-expanded="false">How does GDPR compliance work in practice for a startup? <span class="faq-icon" aria-hidden="true">+</span></button>
+        <div class="faq-ans"><div class="faq-ans-inner"><p>Minimum viable GDPR posture for an early-stage startup: document your data processing in a Record of Processing Activities (RoPA), implement a privacy policy that accurately reflects your practices, ensure you have a valid legal basis for each type of processing (consent for marketing, legitimate interests for most B2B processing), implement data subject rights handling (access, deletion, portability), and have a data breach response plan. Do not collect data you do not need. If you process health, financial, or biometric data, a full DPO and a Data Protection Impact Assessment are required before you process.</p></div></div>
+      </div>
+      <div class="faq-item" data-cat="Regulation">
+        <button class="faq-q" aria-expanded="false">What is the Carbon Border Adjustment Mechanism and is it relevant to startups? <span class="faq-icon" aria-hidden="true">+</span></button>
+        <div class="faq-ans"><div class="faq-ans-inner"><p>CBAM is an EU carbon pricing mechanism applied to certain imports (cement, iron and steel, aluminium, fertilisers, electricity, hydrogen) when carbon costs in the originating country are lower than under EU ETS. For startups, CBAM creates demand for carbon footprint measurement and reporting software at the B2B level, and creates new cost structures for industrial customers that your product may help them navigate. This is a direct market creation event — the same pattern as GDPR for data management software. Watch the implementation timeline closely.</p></div></div>
+      </div>
+
+      <!-- DEEP TECH -->
+      <div class="faq-item" data-cat="Deep tech">
+        <button class="faq-q" aria-expanded="false">How long should a deep tech startup plan before reaching commercial revenue? <span class="faq-icon" aria-hidden="true">+</span></button>
+        <div class="faq-ans"><div class="faq-ans-inner"><p>Be honest with yourself and your investors. For hardware, advanced materials, or novel biology: plan for 4–7 years from founding to first significant commercial revenue. Software-enabled deep tech (AI applied to existing infrastructure, novel-IP process optimisation software) can reach commercial revenue in 2–3 years. The implication: deep tech requires patient capital, which is why grant stacking is the right early-stage financing approach. Build your commercial pipeline in parallel from day one — reference customers who are not yet paying are still operationally valuable and change the risk profile of your equity raise significantly.</p></div></div>
+      </div>
+      <div class="faq-item" data-cat="Deep tech">
+        <button class="faq-q" aria-expanded="false">What is Technology Readiness Level (TRL) and why do investors care? <span class="faq-icon" aria-hidden="true">+</span></button>
+        <div class="faq-ans"><div class="faq-ans-inner"><p>TRL is a 1–9 scale measuring technology maturity from basic research (TRL 1–3) through prototype validation (TRL 4–6) to full commercial deployment (TRL 7–9). EU funding instruments use TRL as an eligibility criterion — Horizon Pathfinder supports TRL 1–4, Innovation Actions support TRL 5–8. Investors use TRL as a shorthand for de-risking milestones. A TRL 3 company raising seed should be able to articulate what specific evidence will confirm TRL 5 and what that evidence will cost to generate. Milestone-gated risk reduction is how sophisticated deep tech investors evaluate pre-revenue companies.</p></div></div>
+      </div>
+      <div class="faq-item" data-cat="Deep tech">
+        <button class="faq-q" aria-expanded="false">What are the main European deep tech clusters? <span class="faq-icon" aria-hidden="true">+</span></button>
+        <div class="faq-ans"><div class="faq-ans-inner"><p>By sector: <strong>Quantum and photonics</strong>: Delft, Munich, Vienna. <strong>Synthetic biology</strong>: London, Paris, Heidelberg, Wageningen. <strong>Advanced manufacturing and robotics</strong>: Munich/Stuttgart, Eindhoven, Wrocław. <strong>Climate tech/energy</strong>: Hamburg, Copenhagen, Stockholm, Amsterdam. <strong>Industrial AI</strong>: Berlin, Paris, Warsaw. <strong>Life sciences and medtech</strong>: Basel, Cambridge, Munich, Copenhagen, Utrecht. Cluster location matters for talent access, pilot partner proximity, and investor familiarity with your technology. If your science is in a weaker startup ecosystem, consider a two-city structure: lab where the science is, commercial team in the nearest high-velocity market.</p></div></div>
+      </div>
+      <div class="faq-item" data-cat="Deep tech">
+        <button class="faq-q" aria-expanded="false">How do I structure a university spin-out deal? <span class="faq-icon" aria-hidden="true">+</span></button>
+        <div class="faq-ans"><div class="faq-ans-inner"><p>Key negotiation points: equity retained by the university (typically 5–20%; anything above 20% is a red flag for external investors), IP licensing exclusivity scope and geography (push for worldwide exclusivity in your specific application domain), sponsored research agreement terms (ensure you can commercialise modifications independently), and board seat rights (observer seat acceptable; full board seat is negotiable). Negotiate hard on equity percentage and IP scope — these are the levers that most affect your long-term cap table. The University of Cambridge and TU Munich have increasingly founder-friendly standard terms that can serve as benchmarks.</p></div></div>
+      </div>
+
+      <!-- COMMUNITY -->
+      <div class="faq-item" data-cat="Community">
+        <button class="faq-q" aria-expanded="false">What is a Startup Europe Chapter and how do I apply? <span class="faq-icon" aria-hidden="true">+</span></button>
+        <div class="faq-ans"><div class="faq-ans-inner"><p>Chapters are monthly gatherings of 20–40 founders, operators, and senior practitioners in specific European cities. They are practitioner-first — not networking events, but structured operational sessions on cross-border mechanics. Each chapter is led by a local operator with genuine experience building companies across borders. To apply, submit via the Join form below with your city, stage, and domain. Applications are reviewed fortnightly. We prioritise founders with live cross-border challenges over those who are still planning.</p></div></div>
+      </div>
+      <div class="faq-item" data-cat="Community">
+        <button class="faq-q" aria-expanded="false">How is Startup Europe different from other European startup communities? <span class="faq-icon" aria-hidden="true">+</span></button>
+        <div class="faq-ans"><div class="faq-ans-inner"><p>Most European startup communities are city-first, social-first, or pitch-first. We are cross-border-first and operational-first. We do not run pitch evenings, demo days, or networking cocktails. We run structured cohort programmes and practitioner sessions focused on specific operational problems that cross-border builders face. Our community exists because it produces better outcomes for founders, not because community is a good thing in principle.</p></div></div>
+      </div>
+      <div class="faq-item" data-cat="Community">
+        <button class="faq-q" aria-expanded="false">Are there membership fees? <span class="faq-icon" aria-hidden="true">+</span></button>
+        <div class="faq-ans"><div class="faq-ans-inner"><p>Chapter access for monthly sessions is free for accepted founders. Build Sprint and Deep Tech Track programmes have participation fees (€1,500–€3,000 per programme depending on format and duration) — these cover facilitation, expert sessions, and operational support. Policy-to-Market Briefings are available to all members at no cost. Our full resource library and playbooks are published openly and free of charge.</p></div></div>
+      </div>
+      <div class="faq-item" data-cat="Community">
+        <button class="faq-q" aria-expanded="false">I am not a tech founder — can I still join? <span class="faq-icon" aria-hidden="true">+</span></button>
+        <div class="faq-ans"><div class="faq-ans-inner"><p>Yes. We deliberately recruit founders from industrial, scientific, clinical, and policy backgrounds. Technology is often a means rather than the primary product in the most compelling European companies. Founders of B2B services firms, consultancies-turned-platforms, and product companies in regulated sectors are explicitly welcome. The one requirement is that you are building something — not advising, investing, or facilitating.</p></div></div>
+      </div>
+      <div class="faq-item" data-cat="Community">
+        <button class="faq-q" aria-expanded="false">How do I find industrial pilot partners in Europe? <span class="faq-icon" aria-hidden="true">+</span></button>
+        <div class="faq-ans"><div class="faq-ans-inner"><p>Concrete approaches: apply to EIT (European Institute of Innovation and Technology) community matching programmes; apply to direct corporate innovation programmes (Siemens Next47, Airbus Ventures, BASF Venture Capital, Bayer G4A all have formal startup partnership programmes); attend Hannover Messe as an exhibitor; work through your university technology transfer office, which usually has existing industrial relationships. The most effective approach is network-mediated warm introduction — ask your investors and board members to introduce you to their corporate LPs.</p></div></div>
+      </div>
+
+    </div><!-- /faq-list -->
+
+    <div class="faq-none" id="faq-none" aria-live="polite" role="status">
+      <p>No matching questions found. <a href="#contact">Ask us directly →</a></p>
+    </div>
+  </div>
+</section>
+
+<!-- ─── CONTACT ────────────────────────────────────────────────────── -->
+<section class="contact-section section--lg" id="contact" aria-labelledby="ct-h">
+  <div class="container">
+    <div class="contact-grid">
+      <div class="contact-copy">
+        <div class="label" style="color:rgba(255,255,255,.4)">Get involved</div>
+        <h2 id="ct-h" class="reveal">Join the mission.</h2>
+        <p class="reveal d1">Tell us who you are and what you are working on.</p>
+        <div class="contact-points reveal d2">
+          <div class="contact-point">Playbooks and regulatory briefings</div>
+          <div class="contact-point">Cross-border practitioner network</div>
+          <div class="contact-point">Open-access resource library</div>
+          <div class="contact-point">Individual support</div>
+        </div>
+      </div>
+
+      <div class="form-card reveal d1">
+        <form id="contact-form">
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="f-name">Name</label>
+              <input type="text" id="f-name" name="name" placeholder="Your name" required autocomplete="name">
+            </div>
+            <div class="form-group">
+              <label for="f-email">Email</label>
+              <input type="email" id="f-email" name="email" placeholder="you@example.com" required autocomplete="email">
+            </div>
+            <div class="form-group full">
+              <label for="f-type">I am a…</label>
+              <select id="f-type" name="type" required>
+                <option value="">Select…</option>
+                <option value="startup">Startup founder / builder</option>
+                <option value="investor">Investor</option>
+                <option value="politician">Politician / policy maker</option>
+                <option value="scientist">Scientist / researcher</option>
+                <option value="citizen">Citizen</option>
+              </select>
+            </div>
+            <div class="form-group full">
+              <label for="f-org">Organisation <span style="opacity:.5;font-weight:400">(optional)</span></label>
+              <input type="text" id="f-org" name="organisation" placeholder="Company, institution, or project">
+            </div>
+            <div class="form-group full">
+              <label for="f-message">Message</label>
+              <textarea id="f-message" name="message" rows="5" placeholder="What brings you here? What do you need, want to contribute, or want to say?" required></textarea>
+            </div>
+            <p class="form-privacy">Your information is used only to respond to your message. We do not share it with third parties without your explicit consent. You can request deletion at any time by emailing <a href="mailto:startupeurope@dittes.info">startupeurope@dittes.info</a>.</p>
+            <div class="form-submit">
+              <button type="submit" class="btn btn-primary form-submit">Send request</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main><!-- /main -->
+
+<!-- ═══════════════════════════════════════════════════════════
+     FOOTER
+════════════════════════════════════════════════════════════ -->
+<footer class="site-footer" role="contentinfo">
+  <div class="container">
+    <div class="footer-inner">
+      <div class="ft-brand">
+        <div class="ft-logo">Startup <span>Europe</span></div>
+        <p class="ft-tag">Founder support network for cross-border company building in Europe.</p>
+        <p class="ft-a11y">Built for accessibility — WCAG 2.1 AA · Keyboard navigable</p>
+      </div>
+      <nav class="ft-col" aria-label="Site links">
+        <div class="ft-col-head">Site</div>
+        <ul>
+          <li><a href="#why-europe">Why Europe</a></li>
+          <li><a href="#playbook">Playbook</a></li>
+          <li><a href="#thesis">Founder Thesis</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="#contact">Join</a></li>
+        </ul>
+      </nav>
+      <nav class="ft-col" aria-label="Organisation links">
+        <div class="ft-col-head">Organisation</div>
+        <ul>
+          <li><a href="#thesis">About</a></li>
+          <li><a href="#contact">Newsletter</a></li>
+          <li><a href="#privacy">Privacy</a></li>
+          <li><a href="https://4hourventure.com/imprint">Imprint</a></li>
+        </ul>
+      </nav>
+    </div>
+    <hr class="ft-rule">
+    <div class="ft-bottom">
+      <span>© Startup Europe. Not affiliated with the European Commission or EU institutions.</span>
+      <div class="ft-legal">
+        <a href="#privacy">Privacy</a>
+        <a href="https://4hourventure.com/imprint">Imprint</a>
+        <a href="mailto:startupeurope@dittes.info">startupeurope@dittes.info</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<button class="btt" id="btt" aria-label="Back to top">↑</button>
+
+<!-- ═══════════════════════════════════════════════════════════
+     SCRIPTS
+════════════════════════════════════════════════════════════ -->
+<script>
+/* WebGL hero */
+'use strict';
+const canvas = document.getElementById('c');
+const gl = canvas.getContext('webgl',{antialias:true,alpha:false,depth:true});
+
+if (!gl) {
+  console.warn('WebGL not supported');
+} else {
+  // existing WebGL code here
+}
+
+// ─── Resize ───────────────────────────────────────────────────────────────────
+let W,H,ASPECT;
+function resize(){
+  const dpr=Math.min(window.devicePixelRatio,2);
+  W=canvas.width =window.innerWidth *dpr;
+  H=canvas.height=window.innerHeight*dpr;
+  ASPECT=W/H;
+  gl.viewport(0,0,W,H);
+}
+window.addEventListener('resize',()=>{resize();buildCamera();});
+resize();
+
+// ─── Mouse ────────────────────────────────────────────────────────────────────
+const mouse={x:-9999,y:-9999};
+canvas.addEventListener('mousemove',e=>{mouse.x=e.clientX;mouse.y=e.clientY;});
+canvas.addEventListener('mouseleave',()=>{mouse.x=-9999;mouse.y=-9999;});
+
+// ─── GLSL helpers ─────────────────────────────────────────────────────────────
+function mkS(type,src){
+  const s=gl.createShader(type);
+  gl.shaderSource(s,src);gl.compileShader(s);
+  if(!gl.getShaderParameter(s,gl.COMPILE_STATUS))console.error(gl.getShaderInfoLog(s));
+  return s;
+}
+function mkP(vs,fs){
+  const p=gl.createProgram();
+  gl.attachShader(p,mkS(gl.VERTEX_SHADER,vs));
+  gl.attachShader(p,mkS(gl.FRAGMENT_SHADER,fs));
+  gl.linkProgram(p);
+  if(!gl.getProgramParameter(p,gl.LINK_STATUS))console.error(gl.getProgramInfoLog(p));
+  return p;
+}
+
+// ─── Mat4 ─────────────────────────────────────────────────────────────────────
+const m4=()=>new Float32Array(16);
+function id(m){m[0]=1;m[1]=0;m[2]=0;m[3]=0;m[4]=0;m[5]=1;m[6]=0;m[7]=0;m[8]=0;m[9]=0;m[10]=1;m[11]=0;m[12]=0;m[13]=0;m[14]=0;m[15]=1;return m;}
+function persp(o,fov,asp,n,f){const t=1/Math.tan(fov*.5),nf=1/(n-f);o[0]=t/asp;o[1]=0;o[2]=0;o[3]=0;o[4]=0;o[5]=t;o[6]=0;o[7]=0;o[8]=0;o[9]=0;o[10]=(f+n)*nf;o[11]=-1;o[12]=0;o[13]=0;o[14]=2*f*n*nf;o[15]=0;return o;}
+function lookAt(o,ex,ey,ez,cx,cy,cz){let fx=cx-ex,fy=cy-ey,fz=cz-ez,l=1/Math.sqrt(fx*fx+fy*fy+fz*fz);fx*=l;fy*=l;fz*=l;let rx=-fz,ry=0,rz=fx;l=1/Math.sqrt(rx*rx+rz*rz);rx*=l;rz*=l;const ux=ry*fz-rz*fy,uy=rz*fx-rx*fz,uz=rx*fy-ry*fx;o[0]=rx;o[1]=ux;o[2]=-fx;o[3]=0;o[4]=ry;o[5]=uy;o[6]=-fy;o[7]=0;o[8]=rz;o[9]=uz;o[10]=-fz;o[11]=0;o[12]=-(rx*ex+ry*ey+rz*ez);o[13]=-(ux*ex+uy*ey+uz*ez);o[14]=(fx*ex+fy*ey+fz*ez);o[15]=1;return o;}
+function mul(o,a,b){const a0=a[0],a1=a[1],a2=a[2],a3=a[3],a4=a[4],a5=a[5],a6=a[6],a7=a[7],a8=a[8],a9=a[9],a10=a[10],a11=a[11],a12=a[12],a13=a[13],a14=a[14],a15=a[15];let x,y,z,w;x=b[0];y=b[1];z=b[2];w=b[3];o[0]=x*a0+y*a4+z*a8+w*a12;o[1]=x*a1+y*a5+z*a9+w*a13;o[2]=x*a2+y*a6+z*a10+w*a14;o[3]=x*a3+y*a7+z*a11+w*a15;x=b[4];y=b[5];z=b[6];w=b[7];o[4]=x*a0+y*a4+z*a8+w*a12;o[5]=x*a1+y*a5+z*a9+w*a13;o[6]=x*a2+y*a6+z*a10+w*a14;o[7]=x*a3+y*a7+z*a11+w*a15;x=b[8];y=b[9];z=b[10];w=b[11];o[8]=x*a0+y*a4+z*a8+w*a12;o[9]=x*a1+y*a5+z*a9+w*a13;o[10]=x*a2+y*a6+z*a10+w*a14;o[11]=x*a3+y*a7+z*a11+w*a15;x=b[12];y=b[13];z=b[14];w=b[15];o[12]=x*a0+y*a4+z*a8+w*a12;o[13]=x*a1+y*a5+z*a9+w*a13;o[14]=x*a2+y*a6+z*a10+w*a14;o[15]=x*a3+y*a7+z*a11+w*a15;return o;}
+function mTr(o,a,tx,ty,tz){const a0=a[0],a1=a[1],a2=a[2],a3=a[3],a4=a[4],a5=a[5],a6=a[6],a7=a[7],a8=a[8],a9=a[9],a10=a[10],a11=a[11];o[0]=a0;o[1]=a1;o[2]=a2;o[3]=a3;o[4]=a4;o[5]=a5;o[6]=a6;o[7]=a7;o[8]=a8;o[9]=a9;o[10]=a10;o[11]=a11;o[12]=a0*tx+a4*ty+a8*tz+a[12];o[13]=a1*tx+a5*ty+a9*tz+a[13];o[14]=a2*tx+a6*ty+a10*tz+a[14];o[15]=a3*tx+a7*ty+a11*tz+a[15];return o;}
+function mRx(o,a,r){const s=Math.sin(r),c=Math.cos(r),b4=a[4],b5=a[5],b6=a[6],b7=a[7],b8=a[8],b9=a[9],b10=a[10],b11=a[11];if(a!==o){o[0]=a[0];o[1]=a[1];o[2]=a[2];o[3]=a[3];o[12]=a[12];o[13]=a[13];o[14]=a[14];o[15]=a[15];}o[4]=b4*c+b8*s;o[5]=b5*c+b9*s;o[6]=b6*c+b10*s;o[7]=b7*c+b11*s;o[8]=b8*c-b4*s;o[9]=b9*c-b5*s;o[10]=b10*c-b6*s;o[11]=b11*c-b7*s;return o;}
+function mRy(o,a,r){const s=Math.sin(r),c=Math.cos(r),b0=a[0],b1=a[1],b2=a[2],b3=a[3],b8=a[8],b9=a[9],b10=a[10],b11=a[11];if(a!==o){o[4]=a[4];o[5]=a[5];o[6]=a[6];o[7]=a[7];o[12]=a[12];o[13]=a[13];o[14]=a[14];o[15]=a[15];}o[0]=b0*c-b8*s;o[1]=b1*c-b9*s;o[2]=b2*c-b10*s;o[3]=b3*c-b11*s;o[8]=b0*s+b8*c;o[9]=b1*s+b9*c;o[10]=b2*s+b10*c;o[11]=b3*s+b11*c;return o;}
+function mRz(o,a,r){const s=Math.sin(r),c=Math.cos(r),b0=a[0],b1=a[1],b2=a[2],b3=a[3],b4=a[4],b5=a[5],b6=a[6],b7=a[7];if(a!==o){o[8]=a[8];o[9]=a[9];o[10]=a[10];o[11]=a[11];o[12]=a[12];o[13]=a[13];o[14]=a[14];o[15]=a[15];}o[0]=b0*c+b4*s;o[1]=b1*c+b5*s;o[2]=b2*c+b6*s;o[3]=b3*c+b7*s;o[4]=b4*c-b0*s;o[5]=b5*c-b1*s;o[6]=b6*c-b2*s;o[7]=b7*c-b3*s;return o;}
+function mSc(o,a,s){o[0]=a[0]*s;o[1]=a[1]*s;o[2]=a[2]*s;o[3]=a[3]*s;o[4]=a[4]*s;o[5]=a[5]*s;o[6]=a[6]*s;o[7]=a[7]*s;o[8]=a[8]*s;o[9]=a[9]*s;o[10]=a[10]*s;o[11]=a[11]*s;o[12]=a[12];o[13]=a[13];o[14]=a[14];o[15]=a[15];return o;}
+const nm3=m=>new Float32Array([m[0],m[1],m[2],m[4],m[5],m[6],m[8],m[9],m[10]]);
+
+// ─── Easing ───────────────────────────────────────────────────────────────────
+const c01   = t=>Math.max(0,Math.min(1,t));
+const lerp  = (a,b,t)=>a+(b-a)*t;
+const eOut4 = t=>1-(1-t)**4;
+const eIO3  = t=>t<.5?4*t*t*t:1-(-2*t+2)**3/2;
+const eIO5  = t=>t<.5?16*t*t*t*t*t:1-(-2*t+2)**5/2;
+
+function cbez(p0x,p0y,p1x,p1y,p2x,p2y,p3x,p3y,t){
+  const u=1-t,u2=u*u,u3=u2*u,t2=t*t,t3=t2*t;
+  return[u3*p0x+3*u2*t*p1x+3*u*t2*p2x+t3*p3x,
+         u3*p0y+3*u2*t*p1y+3*u*t2*p2y+t3*p3y];
+}
+function cbezTan(p0x,p0y,p1x,p1y,p2x,p2y,p3x,p3y,t){
+  const u=1-t;
+  return[3*(u*u*(p1x-p0x)+2*u*t*(p2x-p1x)+t*t*(p3x-p2x)),
+         3*(u*u*(p1y-p0y)+2*u*t*(p2y-p1y)+t*t*(p3y-p2y))];
+}
+
+// ─── S-curve control points ───────────────────────────────────────────────────
+function sCPs(sx,sy,ex,ey,curl){
+  const dx=ex-sx,dy=ey-sy,l=Math.sqrt(dx*dx+dy*dy)||1;
+  const px=-dy/l,py=dx/l;
+  return[sx+dx*.28+px*curl, sy+dy*.28+py*curl,
+         sx+dx*.72-px*curl, sy+dy*.72-py*curl];
+}
+
+// ─── FLAG SHADER (very subtle cloth) ─────────────────────────────────────────
+const FLAG_VS=`
+attribute vec2 a_uv;
+uniform mat4 u_vp; uniform float u_t,u_fw,u_fh;
+varying vec3 v_wp,v_nrm;
+void main(){
+  float u=a_uv.x,v=a_uv.y,amp=u*0.10;
+  const float PI=3.14159265;
+  float w1=sin(u*PI*3.0+u_t*1.5),w2=sin(u*PI*5.5+u_t*2.6)*.28,w3=sin(v*PI*2.0+u_t*0.85)*.20;
+  float wz=amp*(w1+w2+w3);
+  float dzu=0.10*(w1+w2+w3)+amp*(PI*3.0*cos(u*PI*3.0+u_t*1.5)+PI*5.5*cos(u*PI*5.5+u_t*2.6)*.28);
+  float dzv=amp*PI*2.0*cos(v*PI*2.0+u_t*0.85)*.20;
+  vec3 tu=vec3(u_fw,0.,dzu*u_fw),tv=vec3(0.,u_fh,dzv*u_fh);
+  v_nrm=normalize(cross(tu,tv));
+  v_wp=vec3((u-.5)*u_fw,(v-.5)*u_fh,wz);
+  gl_Position=u_vp*vec4(v_wp,1.);
+}`;
+const FLAG_FS=`
+precision mediump float;
+varying vec3 v_wp,v_nrm;
+uniform vec3 u_L,u_eye;
+void main(){
+  vec3 N=normalize(v_nrm),V=normalize(u_eye-v_wp);
+  if(dot(N,V)<0.)N=-N;
+  vec3 L=normalize(u_L),H=normalize(L+V);
+  float d=clamp(dot(N,L),0.,1.),s=pow(max(dot(N,H),0.),90.);
+  vec3 col=mix(vec3(0.008,0.08,0.28),vec3(0.012,0.200,0.600),0.20+d*0.80);
+  col+=vec3(0.32,0.52,1.)*s*0.09;
+  gl_FragColor=vec4(col,1.);
+}`;
+const flagP=mkP(FLAG_VS,FLAG_FS);
+const fU={vp:gl.getUniformLocation(flagP,'u_vp'),t:gl.getUniformLocation(flagP,'u_t'),fw:gl.getUniformLocation(flagP,'u_fw'),fh:gl.getUniformLocation(flagP,'u_fh'),L:gl.getUniformLocation(flagP,'u_L'),eye:gl.getUniformLocation(flagP,'u_eye')};
+const fAuv=gl.getAttribLocation(flagP,'a_uv');
+{const FC=72,FR=44,uvs=[],idx=[];
+ for(let r=0;r<=FR;r++)for(let c=0;c<=FC;c++)uvs.push(c/FC,r/FR);
+ for(let r=0;r<FR;r++)for(let c=0;c<FC;c++){const i=r*(FC+1)+c;idx.push(i,i+1,i+FC+1,i+1,i+FC+2,i+FC+1);}
+ const b1=gl.createBuffer();gl.bindBuffer(gl.ARRAY_BUFFER,b1);gl.bufferData(gl.ARRAY_BUFFER,new Float32Array(uvs),gl.STATIC_DRAW);window._fUV=b1;
+ const b2=gl.createBuffer();gl.bindBuffer(gl.ELEMENT_ARRAY_BUFFER,b2);gl.bufferData(gl.ELEMENT_ARRAY_BUFFER,new Uint16Array(idx),gl.STATIC_DRAW);window._fIB=b2;window._fN=idx.length;}
+
+// ─── STAR SHADER (metallic EU gold) ─────────────────────────────────────────
+const STAR_VS=`
+attribute vec3 a_pos,a_nrm;
+uniform mat4 u_mvp,u_model; uniform mat3 u_nm;
+varying vec3 v_wp,v_nrm;
+void main(){
+  vec4 wp=u_model*vec4(a_pos,1.);v_wp=wp.xyz;
+  v_nrm=normalize(u_nm*a_nrm);
+  gl_Position=u_mvp*vec4(a_pos,1.);
+}`;
+const STAR_FS=`
+precision highp float;
+varying vec3 v_wp,v_nrm;
+uniform vec3 u_L0,u_L1,u_L2,u_eye;
+uniform float u_alpha,u_glow;
+const vec3 GOLD = vec3(1.0, 0.8, 0.0);   // exact button yellow
+const vec3 DARK = GOLD * 0.45;          // no brown tint
+const vec3 BRIGHT = GOLD * 1.15;        // highlight stays yellow
+vec3 schlick(vec3 F0,float c){return F0+(1.-F0)*pow(clamp(1.-c,0.,1.),5.);}
+vec3 env(vec3 R){
+  float up = clamp(R.y, 0.0, 1.0);
+  return GOLD * (0.3 + up * 0.4);
+}
+void main(){
+  vec3 N=normalize(v_nrm),V=normalize(u_eye-v_wp);
+  if(dot(N,V)<0.)N=-N;
+  float NdV=max(dot(N,V),.001);
+  vec3 R=reflect(-V,N);
+  vec3 L0=normalize(u_L0),H0=normalize(L0+V);
+  float NdL0=max(dot(N,L0),0.),NdH0=max(dot(N,H0),0.);
+  vec3 Fk=schlick(GOLD,max(dot(H0,V),0.));
+  vec3 L1=normalize(u_L1),H1=normalize(L1+V);
+  float NdL1=max(dot(N,L1),0.),NdH1=max(dot(N,H1),0.);
+  vec3 Ff=schlick(GOLD,max(dot(H1,V),0.));
+  vec3 L2=normalize(u_L2);
+  float NdL2=max(dot(N,L2),0.);
+  float d=NdL0*.48+NdL1*.24+.04;
+  vec3 col=mix(DARK,GOLD,clamp(d*1.1,0.,1.));
+  col+=Fk*pow(NdH0,260.)*NdL0*BRIGHT*4.0;
+  col+=Fk*pow(NdH0,30.)*NdL0*GOLD*.55;
+  col+=Ff*pow(NdH1,45.)*NdL1*vec3(1.,.88,.30)*.50;
+  float rim=pow(1.-NdV,4.5);
+  col+=vec3(.22,.44,1.)*rim*.50+GOLD*rim*NdL2*.38;
+  col+=schlick(GOLD,NdV)*env(R)*.52;
+  col+=GOLD*u_glow*.65;
+  col = clamp(col, 0.0, 1.0);;col=pow(col,vec3(.4545));
+  gl_FragColor=vec4(col,u_alpha);
+}`;
+const starP=mkP(STAR_VS,STAR_FS);
+const sU={mvp:gl.getUniformLocation(starP,'u_mvp'),model:gl.getUniformLocation(starP,'u_model'),nm:gl.getUniformLocation(starP,'u_nm'),L0:gl.getUniformLocation(starP,'u_L0'),L1:gl.getUniformLocation(starP,'u_L1'),L2:gl.getUniformLocation(starP,'u_L2'),eye:gl.getUniformLocation(starP,'u_eye'),alpha:gl.getUniformLocation(starP,'u_alpha'),glow:gl.getUniformLocation(starP,'u_glow')};
+const sAP=gl.getAttribLocation(starP,'a_pos'),sAN=gl.getAttribLocation(starP,'a_nrm');
+
+// ─── 3D Star geometry (smooth bevelled extrusion) ─────────────────────────────
+function buildStar(outer,inner,hd,bev){
+  const pos=[],nrm=[],pts=[];
+  for(let i=0;i<10;i++){const a=(i*Math.PI/5)+Math.PI/2;pts.push([Math.cos(a)*(i%2===0?outer:inner),Math.sin(a)*(i%2===0?outer:inner)]);}
+  for(let i=0;i<10;i++){
+    const c=pts[i],n=pts[(i+1)%10];
+    pos.push(0,0,hd,c[0],c[1],hd,n[0],n[1],hd);nrm.push(0,0,1,0,0,1,0,0,1);
+    pos.push(0,0,-hd,n[0],n[1],-hd,c[0],c[1],-hd);nrm.push(0,0,-1,0,0,-1,0,0,-1);
+  }
+  for(let e=0;e<10;e++){
+    const c=pts[e],n=pts[(e+1)%10],ex=n[0]-c[0],ey=n[1]-c[1],el=Math.sqrt(ex*ex+ey*ey);
+    const sx=ey/el,sy=-ex/el;
+    function ring(v){const a=v*Math.PI,b=Math.sin(a),nz=Math.cos(a),nx=sx*b,ny=sy*b,l=Math.sqrt(nx*nx+ny*ny+nz*nz);return{px:c[0],py:c[1],pz:nz*hd,nx:nx/l,ny:ny/l,nz:nz/l,qx:n[0],qy:n[1],qz:nz*hd};}
+    for(let b=0;b<bev;b++){
+      const r0=ring(b/bev),r1=ring((b+1)/bev);
+      pos.push(r0.px,r0.py,r0.pz,r1.px,r1.py,r1.pz,r1.qx,r1.qy,r1.qz);nrm.push(r0.nx,r0.ny,r0.nz,r1.nx,r1.ny,r1.nz,r1.nx,r1.ny,r1.nz);
+      pos.push(r0.px,r0.py,r0.pz,r1.qx,r1.qy,r1.qz,r0.qx,r0.qy,r0.qz);nrm.push(r0.nx,r0.ny,r0.nz,r1.nx,r1.ny,r1.nz,r0.nx,r0.ny,r0.nz);
+    }
+  }
+  return{pos:new Float32Array(pos),nrm:new Float32Array(nrm),count:pos.length/3};
+}
+// EU proportions: inner/outer = sin18°/sin54° ≈ 0.382
+const GEO_OUTER=0.092,GEO_INNER=0.092*0.382,GEO_HD=0.030;
+const geo=buildStar(GEO_OUTER,GEO_INNER,GEO_HD,10);
+const gPB=gl.createBuffer();gl.bindBuffer(gl.ARRAY_BUFFER,gPB);gl.bufferData(gl.ARRAY_BUFFER,geo.pos,gl.STATIC_DRAW);
+const gNB=gl.createBuffer();gl.bindBuffer(gl.ARRAY_BUFFER,gNB);gl.bufferData(gl.ARRAY_BUFFER,geo.nrm,gl.STATIC_DRAW);
+
+// ─── Lights ───────────────────────────────────────────────────────────────────
+function nv(v){const l=Math.hypot(...v);return v.map(x=>x/l);}
+const L0=nv([0.50,0.82,1.0]),L1=nv([-0.72,-0.38,0.55]),L2=nv([0.0,0.0,-1.0]);
+
+// ─── Camera & scene layout ────────────────────────────────────────────────────
+const CAM_Z=5.0,FOV=50*Math.PI/180;
+const _proj=m4(),_view=m4();
+let VP=m4(),flagW,flagH,STAR_SCALE,CX,CY;
+// EU_R in geometry units (before STAR_SCALE) — will be scaled 2.5×
+const BASE_EU_R=0.62, SCALE_FACTOR=2.5;
+let EU_R=BASE_EU_R;
+
+function buildCamera(){
+  persp(_proj,FOV,ASPECT,0.1,100);
+  lookAt(_view,0,0,CAM_Z,0,0,0);
+  mul(VP,_proj,_view);
+  const worldH=2*CAM_Z*Math.tan(FOV*0.5);
+  const worldW=worldH*ASPECT;
+  flagH=worldH*1.08; flagW=flagH*ASPECT;
+  // Scale all geometry by screen-relative factor × user 2.5× request
+  STAR_SCALE=(worldH/3.64)*SCALE_FACTOR;
+  EU_R=BASE_EU_R*SCALE_FACTOR;
+  // Circle center: 20% right, 10% down
+  CX= worldW*0.20;
+  CY=-worldH*0.10;
+}
+buildCamera();
+
+// Project a world point to CSS pixel space (for hover hit-test)
+function project(wx,wy,wz){
+  const x4=VP[0]*wx+VP[4]*wy+VP[8]*wz+VP[12];
+  const y4=VP[1]*wx+VP[5]*wy+VP[9]*wz+VP[13];
+  const w4=VP[3]*wx+VP[7]*wy+VP[11]*wz+VP[15];
+  if(Math.abs(w4)<1e-5)return[-9999,-9999];
+  return[(x4/w4*.5+.5)*window.innerWidth,(-y4/w4*.5+.5)*window.innerHeight];
+}
+
+// ─── Formation helpers ────────────────────────────────────────────────────────
+const NS=12,SZ=1.0;
+function euPos(i,off){
+  const a=(i/NS)*Math.PI*2+Math.PI/2+(off||0);
+  return[CX+Math.cos(a)*EU_R, CY+Math.sin(a)*EU_R];
+}
+
+// ─── Per-star bezier curves (precomputed per frame for rebuildCamera safety) ──
+const SPAWN=[-6.5,-3.2];  // off-screen bottom-left
+const CURL=1.8;
+
+function getStarCurves(i){
+  const[tx,ty]=euPos(i,0);
+  const[c1x,c1y,c2x,c2y]=sCPs(SPAWN[0],SPAWN[1],tx,ty,CURL);
+  return{tx,ty,c1x,c1y,c2x,c2y};
+}
+
+// ─── Animation state machine ──────────────────────────────────────────────────
+// Phases:
+//  FLYIN      – stars stream in one by one
+//  IDLE1      – first pause (5–10s random)
+//  SPIN_IND   – each star spins once on Y, staggered
+//  IDLE2      – second pause (5–10s random)
+//  SPIN_CIR   – full circle rotates 360° (smooth eIO5)
+//  → back to IDLE1
+
+const TFI_STAG   = 0.68;   // seconds between each star starting its fly-in
+const TFI_TRAV   = 1.85;   // seconds for each star to travel its S-curve
+const SPIN_STAG  = 0.22;   // stagger between individual spins
+const SPIN_DUR   = 2.50;   // duration of each individual spin
+const CIRC_DUR   = 9.0;    // circle rotation 360° duration
+
+// Total fly-in duration: last star finishes at:
+const TFI_TOTAL  = TFI_STAG*(NS-1)+TFI_TRAV;    // ≈ 9.33s
+const SPIN_TOTAL = SPIN_STAG*(NS-1)+SPIN_DUR;    // ≈ 4.92s
+
+let phase       = 'FLYIN';
+let phaseStart  = 0;     // T when current phase started (seconds)
+let idleDur     = 0;     // randomized idle duration
+let circOff     = 0;     // current circle rotation offset (radians)
+
+function nextIdleDur(){ return 5 + Math.random()*5; } // 5–10s
+
+// ─── Per-star hover state ─────────────────────────────────────────────────────
+const starState = Array.from({length:NS},()=>({
+  hovered:    false,
+  hoverScale: 1.0,   // lerps toward 1.22 on hover
+  spinActive: false,
+  spinProg:   0.0,   // 0 → 1, hover-triggered spin progress
+}));
+const HOVER_SPIN_DUR=0.80;
+
+// ─── Render loop ──────────────────────────────────────────────────────────────
+const _mod=m4(),_mvp=m4();
+let t0=null,prevT=0;
+
+function frame(ts){
+  requestAnimationFrame(frame);
+  if(!t0){t0=ts;prevT=0;}
+  const T=(ts-t0)*.001;
+  const dt=Math.min(T-prevT,.05);
+  prevT=T;
+
+  // ── Phase state machine ──────────────────────────────────────────────────
+  const el=T-phaseStart;  // time in current phase
+
+  switch(phase){
+    case 'FLYIN':
+      if(el>TFI_TOTAL+0.8){
+        phase='IDLE1'; phaseStart=T; idleDur=nextIdleDur(); circOff=0;
+      }
+      break;
+    case 'IDLE1':
+      if(el>idleDur){ phase='SPIN_IND'; phaseStart=T; }
+      break;
+    case 'SPIN_IND':
+      if(el>SPIN_TOTAL+0.5){ phase='IDLE2'; phaseStart=T; idleDur=nextIdleDur(); }
+      break;
+    case 'IDLE2':
+      if(el>idleDur){ phase='SPIN_CIR'; phaseStart=T; }
+      break;
+    case 'SPIN_CIR':
+      circOff=eIO5(c01(el/CIRC_DUR))*Math.PI*2;
+      if(el>CIRC_DUR+0.6){ circOff=0; phase='IDLE1'; phaseStart=T; idleDur=nextIdleDur(); }
+      break;
+  }
+
+  // ── Flag ─────────────────────────────────────────────────────────────────
+  gl.clearColor(0,0,0,1);
+  gl.clear(gl.COLOR_BUFFER_BIT|gl.DEPTH_BUFFER_BIT);
+  gl.enable(gl.DEPTH_TEST);gl.depthMask(true);
+  gl.disable(gl.BLEND);gl.disable(gl.CULL_FACE);
+
+  gl.useProgram(flagP);
+  gl.uniformMatrix4fv(fU.vp,false,VP);
+  gl.uniform1f(fU.t,T);gl.uniform1f(fU.fw,flagW);gl.uniform1f(fU.fh,flagH);
+  gl.uniform3f(fU.L,L0[0],L0[1],L0[2]);gl.uniform3f(fU.eye,0,0,CAM_Z);
+  gl.bindBuffer(gl.ARRAY_BUFFER,window._fUV);
+  gl.enableVertexAttribArray(fAuv);gl.vertexAttribPointer(fAuv,2,gl.FLOAT,false,0,0);
+  gl.bindBuffer(gl.ELEMENT_ARRAY_BUFFER,window._fIB);
+  gl.drawElements(gl.TRIANGLES,window._fN,gl.UNSIGNED_SHORT,0);
+
+  // ── Stars ────────────────────────────────────────────────────────────────
+  gl.enable(gl.BLEND);gl.blendFunc(gl.SRC_ALPHA,gl.ONE_MINUS_SRC_ALPHA);
+  gl.enable(gl.CULL_FACE);gl.cullFace(gl.BACK);
+
+  gl.useProgram(starP);
+  gl.uniform3f(sU.L0,L0[0],L0[1],L0[2]);
+  gl.uniform3f(sU.L1,L1[0],L1[1],L1[2]);
+  gl.uniform3f(sU.L2,L2[0],L2[1],L2[2]);
+  gl.uniform3f(sU.eye,0,0,CAM_Z);
+
+  gl.bindBuffer(gl.ARRAY_BUFFER,gPB);
+  gl.enableVertexAttribArray(sAP);gl.vertexAttribPointer(sAP,3,gl.FLOAT,false,0,0);
+  gl.bindBuffer(gl.ARRAY_BUFFER,gNB);
+  gl.enableVertexAttribArray(sAN);gl.vertexAttribPointer(sAN,3,gl.FLOAT,false,0,0);
+
+  for(let i=0;i<NS;i++){
+    const ss=starState[i];
+    const sc=getStarCurves(i);   // bezier control points toward slot (offset-aware)
+    const[euX,euY]=euPos(i,circOff); // current position accounting for circle rotation
+
+    let x=CX-10,y=CY,cry=0,crz=0,crx=0,alpha=1,animSc=1,glow=0;
+    let visible=true, inSlot=false;
+
+    // ── FLY IN ──────────────────────────────────────────────────────────────
+    if(phase==='FLYIN'){
+      const fiS=i*TFI_STAG;
+      const fiE=fiS+TFI_TRAV;
+      if(el<fiS){
+        visible=false;
+      } else if(el<fiE){
+        // Progress along bezier (eOut4: fast start, decelerates to slot)
+        const p=eOut4(c01((el-fiS)/TFI_TRAV));
+
+        // POSITION along S-curve bezier
+        const bz=cbez(SPAWN[0],SPAWN[1],sc.c1x,sc.c1y,sc.c2x,sc.c2y,sc.tx,sc.ty,p);
+        x=bz[0]; y=bz[1];
+
+        // CRZ: rotate star to face its direction of travel (tangent-aligned)
+        // Blend crz OUT over last 30% of path → star arrives dead upright
+        const pSafe=Math.max(p,0.001);
+        const tan=cbezTan(SPAWN[0],SPAWN[1],sc.c1x,sc.c1y,sc.c2x,sc.c2y,sc.tx,sc.ty,pSafe);
+        const tl=Math.hypot(tan[0],tan[1])||1;
+        const rawCrz=Math.atan2(tan[1]/tl,tan[0]/tl)-Math.PI*.5;
+        // Blend: at p=0.75 → full tilt; at p=1.0 → zero tilt
+        crz=rawCrz*c01(1-(p-0.70)/0.30)*eIO3(c01(1-(p-0.70)/0.30));
+
+        // CRY: 2.5 rotations (5π) decelerating to exactly 0 at arrival
+        // 5π mod 2π = π → star starts edge-on (clearly spinning)
+        // Uses eOut4(1-p): fast spin at start, brakes hard at end
+        cry=eOut4(1-p)*Math.PI*5.0;
+
+        // CRX: gentle bank into curve (cross-product of successive tangents → curvature sign)
+        const p2=Math.min(pSafe+.04,.9995);
+        const tan2=cbezTan(SPAWN[0],SPAWN[1],sc.c1x,sc.c1y,sc.c2x,sc.c2y,sc.tx,sc.ty,p2);
+        crx=Math.sign(tan[0]*tan2[1]-tan[1]*tan2[0])*0.25*Math.sin(p*Math.PI);
+
+        alpha=c01((el-fiS)*4.5);
+        animSc=0.05+p*.95;
+      } else {
+        // Arrived — sit in slot, all rotations zero, clean
+        x=sc.tx; y=sc.ty; cry=0; crz=0; crx=0; inSlot=true;
+        // Tiny landing bounce (no rotation involved — pure scale only)
+        const since=el-fiE;
+        if(since<0.40) animSc=1+Math.sin((since/0.40)*Math.PI)*0.07;
+      }
+
+    // ── IDLE1 / IDLE2: stars sit perfectly still in formation ───────────────
+    } else if(phase==='IDLE1'||phase==='IDLE2'){
+      x=euX; y=euY; inSlot=true;
+
+    // ── SPIN_IND: staggered individual 360° Y spins ─────────────────────────
+    } else if(phase==='SPIN_IND'){
+      x=euX; y=euY;
+      const spS=i*SPIN_STAG, spE=spS+SPIN_DUR;
+      if(el>=spS&&el<spE){
+        const p=eIO3(c01((el-spS)/SPIN_DUR));
+        cry=p*Math.PI*2;           // exactly one full rotation → back to 0
+        animSc=1+Math.sin(p*Math.PI)*.05;
+      }
+      inSlot=true;
+
+    // ── SPIN_CIR: entire circle rotates 360° (smooth eIO5) ──────────────────
+    } else if(phase==='SPIN_CIR'){
+      x=euX; y=euY; inSlot=true;
+      // Subtle brightness pulse as circle rotates
+      const pulse=Math.sin(T*1.8+i*(Math.PI*2/NS));
+      glow=Math.max(0,pulse)*0.30;
+    }
+
+    if(!visible)continue;
+
+    // ── HOVER INTERACTION (only when star is in its static slot) ─────────────
+    if(inSlot){
+      const[scx,scy]=project(x,y,SZ);
+      const[srx,sry]=project(x+GEO_OUTER*STAR_SCALE,y,SZ);
+      const screenR=Math.hypot(srx-scx,sry-scy)*1.8;
+      const prevH=ss.hovered;
+      ss.hovered=Math.hypot(scx-mouse.x,scy-mouse.y)<screenR;
+
+      // Trigger spin on enter (only if not already spinning)
+      if(ss.hovered&&!prevH&&!ss.spinActive){
+        ss.spinActive=true; ss.spinProg=0;
+      }
+    } else {
+      ss.hovered=false;
+    }
+
+    // Advance hover spin (guaranteed to complete even if cursor leaves)
+    if(ss.spinActive){
+      ss.spinProg+=dt/HOVER_SPIN_DUR;
+      if(ss.spinProg>=1){ss.spinProg=0;ss.spinActive=false;}
+    }
+
+    // Smooth hover scale
+    ss.hoverScale+=((ss.hovered?1.22:1.0)-ss.hoverScale)*0.14;
+
+    // Hover spin adds an extra Y rotation on top of animation cry
+    const hoverCry=ss.spinActive?eIO5(ss.spinProg)*Math.PI*2:0;
+
+    // ── Build model matrix ────────────────────────────────────────────────
+    const finalSc=animSc*ss.hoverScale*STAR_SCALE;
+    id(_mod);
+    mTr(_mod,_mod,x,y,SZ);
+    mRy(_mod,_mod,cry+hoverCry);
+    mRz(_mod,_mod,crz);
+    mRx(_mod,_mod,crx);
+    mSc(_mod,_mod,finalSc);
+    mul(_mvp,VP,_mod);
+
+    gl.uniformMatrix4fv(sU.mvp,  false,_mvp);
+    gl.uniformMatrix4fv(sU.model,false,_mod);
+    gl.uniformMatrix3fv(sU.nm,   false,nm3(_mod));
+    gl.uniform1f(sU.alpha,alpha);
+    gl.uniform1f(sU.glow, glow);
+    gl.drawArrays(gl.TRIANGLES,0,geo.count);
+  }
+}
+
+requestAnimationFrame(frame);
+</script>
+<script>
+/* ── Site interactivity ───────────────────────────────────────────── */
+(function(){
+  // Header scroll
+  const hdr = document.querySelector('.site-header');
+  window.addEventListener('scroll', () => {
+    hdr.classList.toggle('scrolled', window.scrollY > 20);
+  }, {passive:true});
+
+  // Reading progress bar
+  const rp = document.getElementById('rp');
+  window.addEventListener('scroll', () => {
+    const h = document.documentElement.scrollHeight - window.innerHeight;
+    if(h > 0) rp.style.width = (window.scrollY / h * 100) + '%';
+  }, {passive:true});
+
+  // Mobile nav
+  const mobBtn = document.querySelector('.mob-btn');
+  const mobNav = document.getElementById('mob-nav');
+  if(mobBtn && mobNav){
+    mobBtn.addEventListener('click', () => {
+      const open = mobBtn.getAttribute('aria-expanded') === 'true';
+      mobBtn.setAttribute('aria-expanded', String(!open));
+      mobNav.classList.toggle('open', !open);
+    });
+    document.addEventListener('click', e => {
+      if(!mobBtn.contains(e.target) && !mobNav.contains(e.target)){
+        mobBtn.setAttribute('aria-expanded','false');
+        mobNav.classList.remove('open');
+      }
+    });
+    mobNav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+      mobBtn.setAttribute('aria-expanded','false');
+      mobNav.classList.remove('open');
+    }));
+  }
+
+  // Back to top
+  const btt = document.getElementById('btt');
+  window.addEventListener('scroll', () => btt.classList.toggle('vis', window.scrollY > 400), {passive:true});
+  btt.addEventListener('click', () => window.scrollTo({top:0, behavior:'smooth'}));
+
+  // Scroll reveal
+  const revEls = document.querySelectorAll('.reveal');
+  const revObs = new IntersectionObserver(entries => {
+    entries.forEach(e => { if(e.isIntersecting){ e.target.classList.add('in'); revObs.unobserve(e.target); }});
+  }, {threshold:.1, rootMargin:'0px 0px -30px 0px'});
+  revEls.forEach(el => revObs.observe(el));
+
+  // Animated counters
+  function animCount(el, target, suf, dur) {
+    const t0 = performance.now();
+    const upd = now => {
+      const p = Math.min((now-t0)/dur, 1);
+      const e = 1-(1-p)**3;
+      el.textContent = Math.round(e*target).toLocaleString('en') + suf;
+      if(p < 1) requestAnimationFrame(upd);
+    };
+    requestAnimationFrame(upd);
+  }
+  const cntObs = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if(e.isIntersecting){
+        const el = e.target;
+        animCount(el, +el.dataset.count, el.dataset.suf || '', 1600);
+        cntObs.unobserve(el);
+      }
+    });
+  }, {threshold:.5});
+  document.querySelectorAll('[data-count]').forEach(el => cntObs.observe(el));
+
+  // FAQ accordion
+  function initAccordion(list) {
+    list.querySelectorAll('.faq-item').forEach(item => {
+      const btn = item.querySelector('.faq-q');
+      const ans = item.querySelector('.faq-ans');
+      if(!btn || !ans) return;
+      btn.addEventListener('click', () => {
+        const open = item.classList.contains('open');
+        // Close all in same list
+        list.querySelectorAll('.faq-item.open').forEach(o => {
+          o.classList.remove('open');
+          o.querySelector('.faq-q').setAttribute('aria-expanded','false');
+          o.querySelector('.faq-ans').style.maxHeight = null;
+        });
+        if(!open){
+          item.classList.add('open');
+          btn.setAttribute('aria-expanded','true');
+          ans.style.maxHeight = ans.scrollHeight + 'px';
+        }
+      });
+    });
+  }
+  const faqList = document.getElementById('faq-list');
+  if(faqList) initAccordion(faqList);
+
+  // FAQ search + filter
+  const faqInput = document.getElementById('faq-input');
+  const catBtns  = document.querySelectorAll('.cat-btn');
+  const faqNone  = document.getElementById('faq-none');
+  let activeCat = 'All', searchTerm = '';
+
+  function filterFAQ() {
+    let vis = 0;
+
+    faqList.querySelectorAll('.faq-item').forEach(item => {
+      const cat = item.dataset.cat || '';
+      const text = item.textContent.toLowerCase();
+
+      const catOk = activeCat === 'All' || cat === activeCat;
+      const searchOk = !searchTerm || text.includes(searchTerm);
+
+      item.style.display = (catOk && searchOk) ? '' : 'none';
+
+      if (catOk && searchOk) vis++;
+    });
+
+    if (faqNone) {
+      faqNone.style.display = vis === 0 ? 'block' : 'none';
+    }
+  }
+
+  catBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      catBtns.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      activeCat = btn.dataset.cat || 'All';
+      filterFAQ();
+    });
+  });
+
+  if(faqInput) {
+    faqInput.addEventListener('input', () => {
+      searchTerm = faqInput.value.toLowerCase().trim();
+      filterFAQ();
+    });
+  }
+
+})();
+</script>
+<script>
+(function(){
+
+  const form = document.getElementById('contact-form');
+
+  if(form){
+    form.addEventListener('submit', function(e){
+      e.preventDefault();
+
+      const formData = new FormData(form);
+
+      let body = "Startup Europe Request\n\n";
+
+      formData.forEach((value, key) => {
+        body += key + ": " + value + "\n";
+      });
+
+      const subject = encodeURIComponent("Startup Europe Request");
+      const encodedBody = encodeURIComponent(body);
+
+      const mailtoLink =
+        "mailto:startupeurope@dittes.info" +
+        "?subject=" + subject +
+        "&body=" + encodedBody;
+
+      window.location.href = mailtoLink;
+    });
+  }
+
+})();
+</script>
+
 </body>
 </html>
